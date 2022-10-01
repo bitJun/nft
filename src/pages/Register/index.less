@@ -1,0 +1,83 @@
+.register_view {
+  height: 100vh;
+  width: 100%;
+  background-image: url('../../assets/images/bg.png');
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+  padding-top: 139px;
+  padding-left: 145px;
+  box-sizing: border-box;
+  overflow-y: scroll;
+  position: relative;
+  &_title {
+    height: 75px;
+    font-size: 80px;
+    font-family: Source Han Sans CN;
+    font-weight: 500;
+    color: #ED2E56;
+    line-height: 75px;
+    margin-bottom: 32px;
+  }
+  &_desc {
+    height: 48px;
+    font-size: 48px;
+    font-family: SourceHanSansCN;
+    font-weight: 400;
+    color: #FFFFFF;
+    margin-bottom: 57px;
+    position: relative;
+  }
+  &_desc::after {
+    position: absolute;
+    left: 0;
+    top: 78px;
+    width: 900px;
+    content: '';
+    height: 1px;
+    background: #ffffff;
+  }
+  &_subtitle {
+    font-size: 18px;
+    font-family: SourceHanSansCN;
+    font-weight: 400;
+    color: #FFFFFF;
+  }
+  &_uploadtip {
+    height: 11px;
+    line-height: 11px;
+    font-size: 10px;
+    font-family: Source Han Sans CN;
+    font-weight: 300;
+    color: #FFFFFF;
+    margin-bottom: 20px;
+  }
+  &_action {
+    width: 180px;
+    height: 40px;
+    border: 1px solid #FFFFFF;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 18px;
+    font-family: Source Han Sans CN;
+    font-weight: 400;
+    color: #FFFFFF;
+  }
+  .avatar-uploader {
+    width: 120px;
+    height: 120px;
+    background: #313131;
+    border-radius: 5px;
+    margin-bottom: 27px;
+    /deep/ .ant-upload.ant-upload-select-picture-card {
+      width: 120px;
+      height: 120px;background: #313131;
+    }
+  }
+}
+:global {
+  .ant-upload.ant-upload-select-picture-card {
+    width: 120px;
+    height: 120px;background: #313131;
+  }
+}

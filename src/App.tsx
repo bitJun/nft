@@ -1,33 +1,35 @@
 import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import './App.css'
+import { BrowserRouter, Route, Routes } from "react-router-dom";
+import { AliveScope } from "react-activation";
+import PageLayout from './Layout/PageLayout';
+import Index from './pages/Home';
+import Exchange from './pages/Exchange';
+import Limit from './pages/Limit';
+import Mine from './pages/Mine';
+import Register from './pages/Register';
+import Unique from './pages/Unique';
+import Identity from './pages/Identity';
+import 'antd/dist/antd.css';
 
 function App() {
-  const [count, setCount] = useState(0)
-
   return (
-    <div className="App">
-      <div>
-        <a href="https://vitejs.dev" target="_blank">
-          <img src="/vite.svg" className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://reactjs.org" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
-      </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.tsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
-    </div>
+    <AliveScope>
+      <BrowserRouter>
+        <Routes>
+          <Route path="/" element={<Index />} />
+        </Routes>
+        <Routes>
+          <Route path="/page" element={<PageLayout />}>
+            <Route path="/page/exchange" element={<Exchange />} />
+            <Route path="/page/mine" element={<Mine />} />
+            <Route path="/page/limit" element={<Limit />} />
+            <Route path="/page/register" element={<Register />} />
+            <Route path="/page/unique" element={<Unique />} />
+            <Route path="/page/identity" element={<Identity />} />
+          </Route>
+        </Routes>
+      </BrowserRouter>
+    </AliveScope>
   )
 }
 

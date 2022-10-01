@@ -1,0 +1,115 @@
+.container {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+}
+.container-layout {
+  width: 320px;
+  height: 100vh;
+  box-sizing: border-box;
+  background: #1A1D1F;
+  padding-top: 31px;
+  overflow-y: scroll;
+}
+.container-layout-header {
+  display: flex;
+  align-items: center;
+  margin-bottom: 53px;
+  padding-left: 25px;
+  box-sizing: border-box;
+}
+.container-layout-header-main {
+  width: 240px;
+  height: 36px;
+  background: #313131;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  padding-left: 7px;
+  box-sizing: border-box;
+  margin-right: 15px;
+  /* overflow-x: scroll; */
+}
+.container-layout-header-main p {
+  font-size: 24px;
+  font-family: Source Han Sans CN;
+  font-weight: 300;
+  color: #ffffff;
+}
+.container-layout-header-main-coin {
+  width: 17px;
+  height: 16px;
+  margin-right: 6px;
+}
+.container-layout-header-main-bit {
+  width: 7.5px;
+  height: 8.5px;
+  margin-left: 38px;
+}
+.container-layout-header-icon {
+  width: 20px;
+  height: 19px;
+}
+.container-layout-logo {
+  padding-left: 56px;
+  margin-bottom: 74px;
+}
+.container-layout-logo-img {
+  width: 208px;
+  height: 28px;
+  cursor: pointer;
+}
+.container-layout-nav {
+  padding: 0 30px 66px 30px;
+}
+.container-layout-nav-item {
+  height: 45px;
+  padding-left: 4px;
+  position: relative;
+  display: flex;
+  align-items: center;
+  font-size: 18px;
+  font-family: Source Han Sans CN;
+  font-weight: 300;
+  color: #FFFFFF;
+}
+.container-layout-nav-item-icon {
+
+}
+.container-layout-other {
+  padding: 0px 30px;
+}
+.container-layout-other-main {
+  padding-top: 34px;
+  border-top: 1px solid #2A2E33;
+}
+.container-layout-other-main-item {
+  height: 16px;
+  font-size: 16px;
+  font-family: Source Han Sans CN;
+  font-weight: 300;
+  color: #FFFFFF;
+  margin-bottom: 26px;
+  cursor: pointer;
+}
+.container-layout-actions {
+  margin-top: 200px;
+  padding: 0 45px;
+}
+.container-layout-actions-item {
+  width: 230px;
+  height: 40px;
+  border: 1px solid #FFFFFF;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 16px;
+  font-family: Source Han Sans CN;
+  font-weight: 400;
+  color: #FFFFFF;
+  margin-bottom: 20px;
+  cursor: pointer;
+}
+.container-main {
+  flex: 1;
+}

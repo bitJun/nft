@@ -1,0 +1,17 @@
+.mine_view {
+  height: 100vh;
+  width: 100%;
+  background-image: url('../../assets/images/bg.png');
+  background-size: contain;
+  background-repeat: no-repeat;
+  padding-top: 84px;
+  box-sizing: border-box;
+  &_title {
+    text-indent: 485px;
+    height: 45px;
+    font-size: 48px;
+    font-family: Source Han Sans CN;
+    font-weight: 500;
+    color: #ED2E56;
+  }
+}
