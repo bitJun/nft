@@ -4,7 +4,7 @@ import { AliveScope } from "react-activation";
 import PageLayout from './Layout/PageLayout';
 import Index from './pages/Home';
 import Exchange from './pages/Exchange';
-import Limit from './pages/Limit';
+import Casting from './pages/Casting';
 import Mine from './pages/Mine';
 import Register from './pages/Register';
 import Unique from './pages/Unique';
@@ -22,7 +22,7 @@ function App() {
           <Route path="/page" element={<PageLayout />}>
             <Route path="/page/exchange" element={<Exchange />} />
             <Route path="/page/mine" element={<Mine />} />
-            <Route path="/page/limit" element={<Limit />} />
+            <Route path="/page/casting" element={<Casting />} />
             <Route path="/page/register" element={<Register />} />
             <Route path="/page/unique" element={<Unique />} />
             <Route path="/page/identity" element={<Identity />} />
