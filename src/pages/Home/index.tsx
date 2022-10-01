@@ -12,6 +12,7 @@ import './index.less';
 const Index = () => {
   const navigate = useNavigate();
   const goLink = (link:string, e:any) => {
+    console.log(e);
     navigate(link);
   }
   return (

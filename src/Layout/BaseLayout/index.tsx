@@ -13,6 +13,7 @@ interface LayoutProps {
 const BaseLayout = ({ children }: LayoutProps) => {
   const navigate = useNavigate();
   const goLink = (url:string, event:any) => {
+    console.log(event)
     navigate(url);
   }
   return (

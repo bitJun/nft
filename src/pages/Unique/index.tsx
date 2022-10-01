@@ -1,7 +1,7 @@
 import { useEffect, useState } from 'react';
 import './index.css';
 
-const Exchange = (props) => {
+const Exchange = () => {
   return (
     <div>
     Unique

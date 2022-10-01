@@ -3,7 +3,7 @@ import './index.less';
 import casting from '../../assets/images/pic.png';
 import shareIcon from '../../assets/images/share.png';
 
-const Exchange = (props) => {
+const Exchange = () => {
   return (
     <div className='mine_view'>
       <h2 className='mine_view_title'>
