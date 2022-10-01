@@ -1,0 +1,116 @@
+.container {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  &-layout {
+    width: 320px;
+    height: 100vh;
+    box-sizing: border-box;
+    background: #1A1D1F;
+    padding-top: 31px;
+    overflow-y: scroll;
+    &-header {
+      display: flex;
+      align-items: center;
+      margin-bottom: 53px;
+      padding-left: 25px;
+      box-sizing: border-box;
+      &-main {
+        width: 240px;
+        height: 36px;
+        background: #313131;
+        border-radius: 10px;
+        display: flex;
+        align-items: center;
+        padding-left: 7px;
+        box-sizing: border-box;
+        margin-right: 15px;
+        p {
+          font-size: 24px;
+          font-family: Source Han Sans CN;
+          font-weight: 300;
+          color: #ffffff;
+        }
+        &-coin {
+          width: 17px;
+          height: 16px;
+          margin-right: 6px;
+        }
+        &-bit {
+          width: 7.5px;
+          height: 8.5px;
+          margin-left: 38px;
+        }
+      }
+      &-icon {
+        width: 20px;
+        height: 19px;
+      }
+    }
+    &-logo {
+      padding-left: 56px;
+      margin-bottom: 74px;
+      &-img {
+        width: 208px;
+        height: 28px;
+        cursor: pointer;
+      }
+    }
+    &-nav {
+      padding: 0 30px 66px 30px;
+      &-item {
+        height: 45px;
+        padding-left: 4px;
+        position: relative;
+        display: flex;
+        align-items: center;
+        font-size: 18px;
+        font-family: Source Han Sans CN;
+        font-weight: 300;
+        color: #FFFFFF;
+        cursor: pointer;
+        position: relative;
+      }
+      &-item.active::before {
+        
+      }
+    }
+    &-other {
+      padding: 0px 30px;
+      &-main {
+        padding-top: 34px;
+        border-top: 1px solid #2A2E33;
+        &-item {
+          height: 16px;
+          font-size: 16px;
+          font-family: Source Han Sans CN;
+          font-weight: 300;
+          color: #FFFFFF;
+          margin-bottom: 26px;
+          cursor: pointer;
+        }
+      }
+    }
+    &-actions {
+      margin-top: 200px;
+      padding: 0 45px;
+      &-item {
+        width: 230px;
+        height: 40px;
+        border: 1px solid #FFFFFF;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 16px;
+        font-family: Source Han Sans CN;
+        font-weight: 400;
+        color: #FFFFFF;
+        margin-bottom: 20px;
+        cursor: pointer;
+      }
+    }
+  }
+  &-main {
+    flex: 1;
+  }
+}

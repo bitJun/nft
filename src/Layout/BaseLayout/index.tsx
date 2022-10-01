@@ -4,7 +4,7 @@ import logo from '../../assets/images/logo_white.png';
 import icon from '../../assets/images/icon.png';
 import coin from '../../assets/images/coin.png';
 import bit from '../../assets/images/bit.png';
-import './index.css';
+import './index.less';
 
 interface LayoutProps {
   children: ReactNode;
@@ -24,12 +24,12 @@ const BaseLayout = ({ children }: LayoutProps) => {
               src={coin}
               className='container-layout-header-main-coin'
             />
-            <p>NFT：000.00</p>
+            NFT：000.00
             <img
               src={bit}
               className='container-layout-header-main-bit'
             />
-            <p>TYCHE：000.00</p>
+            TYCHE：000.00
           </div>
           <img
             src={icon}
@@ -43,46 +43,22 @@ const BaseLayout = ({ children }: LayoutProps) => {
           />
         </div>
         <div className='container-layout-nav'>
-          <div className='container-layout-nav-item'>
-            {/* <img
-              src={}
-              className='container-layout-nav-item-icon'
-            /> */}
+          <div className='container-layout-nav-item' onClick={(e:any)=>{goLink('/page/mine', e)}}>
             我的作品
           </div>
-          <div className='container-layout-nav-item'>
-            {/* <img
-              src={}
-              className='container-layout-nav-item-icon'
-            /> */}
+          <div className='container-layout-nav-item' onClick={(e:any)=>{goLink('/page/identity', e)}}>
             全部作品
           </div>
-          <div className='container-layout-nav-item'>
-            {/* <img
-              src={}
-              className='container-layout-nav-item-icon'
-            /> */}
+          <div className='container-layout-nav-item' onClick={(e:any)=>{goLink('/page/casting', e)}}>
             商城
           </div>
-          <div className='container-layout-nav-item'>
-            {/* <img
-              src={}
-              className='container-layout-nav-item-icon'
-            /> */}
+          <div className='container-layout-nav-item' onClick={(e:any)=>{goLink('/page/exchange', e)}}>
             Tyche交换池
           </div>
-          <div className='container-layout-nav-item'>
-            {/* <img
-              src={}
-              className='container-layout-nav-item-icon'
-            /> */}
+          <div className='container-layout-nav-item' onClick={(e:any)=>{goLink('/page/unique', e)}}>
             DAO社区
           </div>
-          <div className='container-layout-nav-item'>
-            {/* <img
-              src={}
-              className='container-layout-nav-item-icon'
-            /> */}
+          <div className='container-layout-nav-item' onClick={(e:any)=>{goLink('/page/register', e)}}>
             投票
           </div>
         </div>
