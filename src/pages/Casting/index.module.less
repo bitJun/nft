@@ -34,6 +34,7 @@
     box-sizing: border-box;
     display: flex;
     flex-wrap: wrap;
+    margin-bottom: 34px;
     &_item {
       width: 205px;
       height: 285px;
@@ -70,20 +71,78 @@
       margin-right: 0;
     }
   }
-}
-.avatar-uploader {
-  width: 185px !important;
-  height: 195px;
-  background: #313131;
-  border-radius: 5px;
-  margin-bottom: 11px;
-  /deep/ .ant-upload.ant-upload-select-picture-card {
-    width: 185px !important;
-    height: 195px !important;
-    background: #313131 !important;
+  &_main {
+    &_control {
+      display: flex;
+      &_left {
+        width: 350px;
+        margin-right: 300px;
+      }
+      &_item {
+        margin-bottom: 25px;
+        &_title {
+          font-size: 18px;
+          font-family: Source Han Sans CN;
+          font-weight: 400;
+          color: #FFFFFF;
+          margin-bottom: 10px;
+        }
+        &_value {
+          width: 350px !important;
+          height: 30px !important;
+          background: #313131 !important;
+          border-radius: 5px !important;
+          font-size: 12px !important;
+          font-family: Source Han Sans CN;
+          font-weight: 200 !important;
+          color: #FFFFFF !important;
+        }
+        &_textarea {
+          width: 350px !important;
+          height: 85px !important;
+          background: #313131 !important;
+          border-radius: 5px !important;
+          font-size: 12px !important;
+          font-family: Source Han Sans CN;
+          font-weight: 200 !important;
+          color: #FFFFFF !important;
+        }
+        &_tip {
+          font-size: 10px;
+          font-family: Source Han Sans CN;
+          font-weight: 300;
+          color: #FFFFFF;
+        }
+      }
+    }
+  }
+  .avatar-uploader {
+    width: 120px;
+    height: 120px;
+    background: #313131;
     border-radius: 5px;
+    margin-bottom: 10px;
+    /deep/ .ant-upload.ant-upload-select-picture-card {
+      width: 120px !important;
+      height: 120px !important;
+      background: #313131 !important;
+    }
+  }
+  .avatar-uploade {
+    width: 185px !important;
+    height: 195px;
+    background: #313131;
+    border-radius: 5px;
+    margin-bottom: 11px;
+    .ant-upload.ant-upload-select-picture-card {
+      width: 185px !important;
+      height: 195px !important;
+      background: #313131 !important;
+      border-radius: 5px;
+    }
   }
 }
+
 :global {
   .ant-upload.ant-upload-select-picture-card {
     width: 185px !important;
