@@ -8,7 +8,10 @@ import styles from './index.module.less';
 
 const Exchange = () => {
   useEffect(()=>{
-    document.getElementById('container').setAttribute('class', 'container' );
+    const container = document.getElementById('container');
+    if (container != null) {
+      container.setAttribute('class', 'container' );
+    }
   }, []);
   return (
     <div className={styles.exchange_view}>

@@ -8,7 +8,10 @@ import styles from './index.module.less';
 
 const Identity = () => {
   useEffect(()=>{
-    document.getElementById('container').setAttribute('class', 'container identity_container' );
+    const container = document.getElementById('container');
+    if (container != null) {
+      container.setAttribute('class', 'container identity_container' );
+    }
   }, []);
   return (
     <div className={styles.identity_view}>

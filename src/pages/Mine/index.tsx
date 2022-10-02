@@ -5,7 +5,10 @@ import shareIcon from '../../assets/images/share.png';
 
 const Mine = () => {
   useEffect(()=>{
-    document.getElementById("container").setAttribute('class', 'container mine_container' );
+    const container = document.getElementById('container');
+    if (container != null) {
+      container.setAttribute('class', 'container mine_container');
+    }
   }, []);
   return (
     <div className={styles.mine_view}>

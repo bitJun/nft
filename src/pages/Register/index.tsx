@@ -15,7 +15,10 @@ const Register = () => {
   const [loading, setLoading] = useState(false);
   const [imageUrl, setImageUrl] = useState<string>();
   useEffect(()=>{
-    document.getElementById('container').setAttribute('class', 'container' );
+    const container = document.getElementById('container');
+    if (container != null) {
+      container.setAttribute('class', 'container');
+    }
   }, []);
 
   const uploadButton = (
