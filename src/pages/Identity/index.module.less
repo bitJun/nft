@@ -1,0 +1,85 @@
+body {
+  background-image: url('../../assets/images/Identity/identity_bg.png');
+  background-size: 100% auto;
+  background-repeat: no-repeat;
+}
+.identity_view {
+  height: 100vh;
+  width: 100%;
+  padding-left: 90px;
+  box-sizing: border-box;
+  overflow-y: scroll;
+  position: relative;
+  display: flex;
+  &_info {
+    width: 350px;
+    height: 100vh;
+    background: #1A1D1F;
+    padding-top: 219px;
+    box-sizing: border-box;
+    &_logo {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-bottom: 38px;
+      &_img {
+        width: 184px;
+        height: 184px;
+        border-radius: 100px;
+      }
+    }
+    &_author {
+      font-size: 24px;
+      font-family: SourceHanSansCN;
+      font-weight: 400;
+      color: #FFFFFF;
+      margin-bottom: 33px;
+      text-align: center;
+    }
+    &_intro {
+      margin: 0 auto 131px auto;
+      width: 170px;
+      height: 52px;
+      line-height: 17px;
+      font-size: 12px;
+      font-family: Source Han Sans CN;
+      font-weight: 300;
+      text-align: center;
+      color: #FFFFFF;
+    }
+    &_price {
+      font-size: 42px;
+      font-family: Source Han Sans CN;
+      font-weight: 400;
+      color: #FFFFFF;
+      width: 200px;
+      padding-bottom: 13px;
+      box-sizing: border-box;
+      margin: 0 auto 103px auto;
+      border-bottom: 1px solid #ffffff;
+      span {
+        font-size: 46px;
+        font-family: 812;
+        font-weight: normal;
+        color: #FFFFFF;
+      }
+    }
+    &_action {
+      margin: 0 auto;
+      width: 240px;
+      height: 40px;
+      background: linear-gradient(0deg, #E8638F 0%, #EF0A3B 100%);
+      border-radius: 0px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 18px;
+      font-family: Source Han Sans CN;
+      font-weight: 400;
+      color: #FFFFFF;
+    }
+  }
+  &_main {
+    flex: 1;
+  }
+}
