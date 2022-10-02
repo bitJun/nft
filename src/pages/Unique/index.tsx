@@ -4,7 +4,8 @@ import {
   Select,
   Upload,
   message,
-} from 'antd'
+} from 'antd';
+
 import { InboxOutlined, LoadingOutlined, PlusOutlined } from '@ant-design/icons';
 import type { UploadProps } from 'antd';
 import uploadIcon from '../../assets/images/upload.png';
@@ -17,6 +18,9 @@ const { Dragger } = Upload;
 const Unique = () => {
   const [loading, setLoading] = useState(false);
   const [imageUrl, setImageUrl] = useState<string>();
+  useEffect(()=>{
+    document.getElementById('container').setAttribute('class', 'container' );
+  }, []);
 
   const uploadButton = (
     <div>

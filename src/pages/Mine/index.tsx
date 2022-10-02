@@ -4,6 +4,9 @@ import casting from '../../assets/images/pic.png';
 import shareIcon from '../../assets/images/share.png';
 
 const Mine = () => {
+  useEffect(()=>{
+    document.getElementById("container").setAttribute('class', 'container mine_container' );
+  }, []);
   return (
     <div className={styles.mine_view}>
       <h2 className={styles.mine_view_title}>

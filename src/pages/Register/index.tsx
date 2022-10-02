@@ -14,6 +14,9 @@ const { TextArea } = Input;
 const Register = () => {
   const [loading, setLoading] = useState(false);
   const [imageUrl, setImageUrl] = useState<string>();
+  useEffect(()=>{
+    document.getElementById('container').setAttribute('class', 'container' );
+  }, []);
 
   const uploadButton = (
     <div>

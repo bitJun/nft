@@ -1,12 +1,13 @@
-body {
-  background-image: url('../../assets/images/Identity/identity_bg.png');
-  background-size: 100% auto;
-  background-repeat: no-repeat;
+:global {
+  .identity_container {
+    background-image: url('../../assets/images/Identity.png');
+    background-size: 100% auto;
+    background-repeat: no-repeat;
+  }
 }
 .identity_view {
   height: 100vh;
   width: 100%;
-  padding-left: 90px;
   box-sizing: border-box;
   overflow-y: scroll;
   position: relative;
@@ -80,6 +81,19 @@ body {
     }
   }
   &_main {
-    flex: 1;
+    width: calc(100vw - 320px - 350px);
+    padding: 779px 43px 0 73px;
+    &_mySwiper {
+      &_item {
+        width: 147px !important;
+        height: 147px !important;
+      }
+      :global {
+        .swiper-slide {
+          width: 147px !important;
+          height: 147px !important;
+        }
+      }
+    }
   }
 }

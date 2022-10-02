@@ -7,6 +7,9 @@ import {
 import styles from './index.module.less';
 
 const Exchange = () => {
+  useEffect(()=>{
+    document.getElementById('container').setAttribute('class', 'container' );
+  }, []);
   return (
     <div className={styles.exchange_view}>
       <h3 className={styles.exchange_view_title}>买入</h3>

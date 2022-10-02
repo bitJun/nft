@@ -83,8 +83,8 @@ const Index = () => {
       </div>
       <div className={styles.index_view_info}>
         <div className={styles.index_view_info_bling}>
-          <div className={styles.index_view_info_bling_main}>
-          
+          <div className={styles.index_view_info_bling_main} style={{color: '#fff'}}>
+          123
           </div>
           <img
             src={pic}

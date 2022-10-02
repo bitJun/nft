@@ -11,6 +11,9 @@ const { TextArea } = Input;
 const Casting = () => {
   const [loading, setLoading] = useState(false);
   const [imageUrl, setImageUrl] = useState<string>();
+  useEffect(()=>{
+    document.getElementById('container').setAttribute('class', 'container' );
+  }, []);
 
   const uploadButton = (
     <div>
@@ -89,6 +92,7 @@ const Casting = () => {
                 className={styles.casting_view_main_control_item_textarea}
               />
             </div>
+            <div className={styles.casting_view_main_control_action}>立即铸造</div>
           </div>
           <div className={styles.casting_view_main_control_right}>
             <div className={styles.casting_view_main_control_item}>
