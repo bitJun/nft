@@ -3,7 +3,8 @@ import { LoadingOutlined, PlusOutlined } from '@ant-design/icons';
 import {
   Upload,
   Input
-} from 'antd'
+} from 'antd';
+import isMobile from '../../utils';
 import styles from './index.module.less';
 import uploadIcon from '../../assets/images/upload.png';
 
@@ -16,8 +17,8 @@ const Casting = () => {
     if (container != null) {
       container.setAttribute('class', 'container' );
     }
+    console.log('isMobile', isMobile())
   }, []);
-
   const uploadButton = (
     <div>
       <img
