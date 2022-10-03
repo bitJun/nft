@@ -23,7 +23,7 @@ const BaseLayout = ({ children }: LayoutProps) => {
     setOpen(false);
   };
   const goLink = (url:string, event:any) => {
-    console.log(event)
+    setOpen(false);
     navigate(url);
   }
   const isMobile = () => {
