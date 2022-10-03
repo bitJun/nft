@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { Carousel } from 'antd';
+import { Carousel, Drawer } from 'antd';
 import logo from '../../assets/images/logo.png';
 import navIcon from '../../assets/images/nav.png';
 import banner1 from '../../assets/images/home/banner1.png';
@@ -22,6 +22,13 @@ const contentStyle: React.CSSProperties = {
 };
 const Index = () => {
   const navigate = useNavigate();
+  const [open, setOpen] = useState<boolean>(false);
+  const showDrawer = () => {
+    setOpen(true);
+  };
+  const onClose = () => {
+    setOpen(false);
+  };
   const goLink = (link:string, e:any) => {
     console.log(e);
     navigate(link);
@@ -63,6 +70,7 @@ const Index = () => {
         <div className={styles.index_view_banner_header_main}>
           <img
             src={navIcon}
+            onClick={()=>{showDrawer()}}
             className={styles.index_view_banner_header_main_icon}
           />
         </div>
@@ -73,6 +81,13 @@ const Index = () => {
     <div className={styles.index_view}>
       <div className={styles.index_view_banner}>
         {isMobile() ? renderMobileHeader() : renderPcHeader()}
+        {
+          isMobile() &&
+          <img
+            src={banner1}
+            className={styles.index_view_banner_img}
+          />
+        }
         <div className={styles.index_view_banner_main}>
           <h3 className={styles.index_view_banner_main_name}>UNBOX</h3>
           <p className={styles.index_view_banner_main_desc}>
@@ -85,6 +100,13 @@ const Index = () => {
         <div className={styles.index_view_actions_item}>SHOP</div>
       </div>
       <div className={styles.index_view_feels}>
+        {
+          isMobile() &&
+          <img
+            src={banner2}
+            className={styles.index_view_feels_img}
+          />
+        }
         <div className={styles.index_view_feels_content}>
           <div className={styles.index_view_feels_content_container}>
             <img
@@ -240,6 +262,36 @@ const Index = () => {
           </div>
         </div>
       </div>
+      <Drawer
+        title=""
+        placement="left"
+        onClose={onClose}
+        open={open}
+        width='80%'
+        bodyStyle={{
+          padding: '0',
+          height: '100vh',
+          background: '#1A1D1F'
+        }}
+        closable={false}
+      >
+        <div className='mobile-layout'>
+          <div className='mobile-layout-nav'>
+            <div className='mobile-layout-nav-item' onClick={(e:any)=>{goLink('/page/mine', e)}}>
+              Fortuna
+            </div>
+            <div className='mobile-layout-nav-item' onClick={(e:any)=>{goLink('/page/identity', e)}}>
+              Fortuna
+            </div>
+            <div className='mobile-layout-nav-item' onClick={(e:any)=>{goLink('/page/casting', e)}}>
+              Fortuna
+            </div>
+            <div className='mobile-layout-nav-item' onClick={(e:any)=>{goLink('/page/exchange', e)}}>
+              Fortuna
+            </div>
+          </div>
+        </div>
+      </Drawer>
     </div>
   )
 }

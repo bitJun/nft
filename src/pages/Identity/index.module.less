@@ -99,30 +99,26 @@
       }
     }
   }
+  .identity_view::-webkit-scrollbar {
+    display: none;
+  }
 }
 
 
 @media only screen and (max-width: 750px) {
   .identity_view {
+    background-image: url('../../assets/images/bg.png') !important;
+    background-size: cover;
+    background-repeat: no-repeat;
     height: 100vh;
     width: 100%;
     box-sizing: border-box;
     overflow-y: scroll;
     position: relative;
     &_main {
-      width: calc(100vw - 320px - 350px);
-      padding: 779px 43px 0 73px;
-      &_mySwiper {
-        &_item {
-          width: 147px !important;
-          height: 147px !important;
-        }
-        :global {
-          .swiper-slide {
-            width: 147px !important;
-            height: 147px !important;
-          }
-        }
+      
+      &_img {
+        width: 100%;
       }
     }
     &_info {
