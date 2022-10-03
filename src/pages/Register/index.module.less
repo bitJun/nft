@@ -1,109 +1,235 @@
-.register_view {
-  height: 100vh;
-  width: 100%;
-  background-image: url('../../assets/images/bg.png');
-  background-size: 100% 100%;
-  background-repeat: no-repeat;
-  padding-top: 139px;
-  padding-left: 145px;
-  box-sizing: border-box;
-  overflow-y: scroll;
-  position: relative;
-  &_title {
-    height: 75px;
-    font-size: 80px;
-    font-family: Source Han Sans CN;
-    font-weight: 500;
-    color: #ED2E56;
-    line-height: 75px;
-    margin-bottom: 32px;
+:global {
+  .register_container {
+    background-image: url('../../assets/images/bg.png') !important;
+    background-size: 100% auto;
+    background-repeat: no-repeat;
   }
-  &_desc {
-    height: 48px;
-    font-size: 48px;
-    font-family: SourceHanSansCN;
-    font-weight: 400;
-    color: #FFFFFF;
-    margin-bottom: 57px;
+}
+@media only screen and (min-width: 750px) {
+  .register_view {
+    height: 100vh;
+    width: 100%;
+    background-image: url('../../assets/images/bg.png');
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    padding-top: 139px;
+    padding-left: 145px;
+    box-sizing: border-box;
+    overflow-y: scroll;
     position: relative;
+    &_title {
+      height: 75px;
+      font-size: 80px;
+      font-family: Source Han Sans CN;
+      font-weight: 500;
+      color: #ED2E56;
+      line-height: 75px;
+      margin-bottom: 32px;
+    }
+    &_desc {
+      height: 48px;
+      font-size: 48px;
+      font-family: SourceHanSansCN;
+      font-weight: 400;
+      color: #FFFFFF;
+      margin-bottom: 57px;
+      position: relative;
+    }
+    &_desc::after {
+      position: absolute;
+      left: 0;
+      top: 78px;
+      width: 900px;
+      content: '';
+      height: 1px;
+      background: #ffffff;
+    }
+    &_subtitle {
+      font-size: 18px;
+      font-family: Source Han Sans CN;
+      font-weight: 400;
+      color: #FFFFFF;
+      margin-bottom: 10px;
+    }
+    &_nickname {
+      width: 350px !important;
+      height: 30px !important;
+      background: #313131 !important;
+      border-radius: 5px !important;
+      margin-bottom: 6px;
+      font-size: 12px !important;
+      font-family: Source Han Sans CN;
+      font-weight: 200;
+      color: #FFFFFF !important;
+    }
+    &_intro {
+      width: 650px !important;
+      height: 160px !important;
+      background: #313131 !important;
+      border-radius: 5px !important;
+      color: #fff !important;
+      font-size: 12px !important;
+      font-family: Source Han Sans CN;
+      font-weight: 200;
+      color: #FFFFFF !important;
+    }
+    &_uploadtip {
+      height: 11px;
+      line-height: 11px;
+      font-size: 10px;
+      font-family: Source Han Sans CN;
+      font-weight: 300;
+      color: #FFFFFF;
+      margin-bottom: 20px;
+    }
+    &_action {
+      width: 180px;
+      height: 40px;
+      border: 1px solid #FFFFFF;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 18px;
+      font-family: Source Han Sans CN;
+      font-weight: 400;
+      color: #FFFFFF;
+      cursor: pointer;
+    }
+    .avatar-uploader {
+      width: 120px;
+      height: 120px;
+      background: #313131;
+      border-radius: 5px;
+      margin-bottom: 27px;
+      /deep/ .ant-upload.ant-upload-select-picture-card {
+        width: 120px !important;
+        height: 120px !important;
+        background: #313131 !important;
+      }
+    }
   }
-  &_desc::after {
-    position: absolute;
-    left: 0;
-    top: 78px;
-    width: 900px;
-    content: '';
-    height: 1px;
-    background: #ffffff;
-  }
-  &_subtitle {
-    font-size: 18px;
-    font-family: Source Han Sans CN;
-    font-weight: 400;
-    color: #FFFFFF;
-    margin-bottom: 10px;
-  }
-  &_nickname {
-    width: 350px !important;
-    height: 30px !important;
-    background: #313131 !important;
-    border-radius: 5px !important;
-    margin-bottom: 6px;
-    font-size: 12px !important;
-    font-family: Source Han Sans CN;
-    font-weight: 200;
-    color: #FFFFFF !important;
-  }
-  &_intro {
-    width: 650px !important;
-    height: 160px !important;
-    background: #313131 !important;
-    border-radius: 5px !important;
-    color: #fff !important;
-    font-size: 12px !important;
-    font-family: Source Han Sans CN;
-    font-weight: 200;
-    color: #FFFFFF !important;
-  }
-  &_uploadtip {
-    height: 11px;
-    line-height: 11px;
-    font-size: 10px;
-    font-family: Source Han Sans CN;
-    font-weight: 300;
-    color: #FFFFFF;
-    margin-bottom: 20px;
-  }
-  &_action {
-    width: 180px;
-    height: 40px;
-    border: 1px solid #FFFFFF;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-size: 18px;
-    font-family: Source Han Sans CN;
-    font-weight: 400;
-    color: #FFFFFF;
-    cursor: pointer;
-  }
-  .avatar-uploader {
-    width: 120px;
-    height: 120px;
-    background: #313131;
-    border-radius: 5px;
-    margin-bottom: 27px;
-    /deep/ .ant-upload.ant-upload-select-picture-card {
+  :global {
+    .ant-upload.ant-upload-select-picture-card {
       width: 120px !important;
       height: 120px !important;
       background: #313131 !important;
     }
   }
 }
-:global {
-  .ant-upload.ant-upload-select-picture-card {
-    width: 120px !important;
-    height: 120px !important;
-    background: #313131 !important;
+
+
+@media only screen and (max-width: 750px) {
+  .register_view {
+    height: 100vh;
+    width: 100%;
+    background-image: url('../../assets/images/bg.png');
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    box-sizing: border-box;
+    overflow-y: scroll;
+    position: relative;
+    &_title {
+      height: 48px;
+      font-size: 48px;
+      text-align: center;
+      font-family: Source Han Sans CN;
+      font-weight: 500;
+      color: #ED2E56;
+      line-height: 75px;
+      margin-bottom: 32px;
+      text-align: center;
+    }
+    &_desc {
+      height: 32px;
+      font-size: 32px;
+      text-align: center;
+      font-family: SourceHanSansCN;
+      font-weight: 400;
+      color: #FFFFFF;
+      margin-bottom: 57px;
+      position: relative;
+    }
+    &_desc::after {
+      position: absolute;
+      left: 0;
+      top: 78px;
+      width: 100%;
+      content: '';
+      height: 1px;
+      background: #ffffff;
+    }
+    &_container {
+      padding: 0 15px;
+    }
+    &_subtitle {
+      font-size: 18px;
+      font-family: Source Han Sans CN;
+      font-weight: 400;
+      color: #FFFFFF;
+      margin-bottom: 10px;
+    }
+    &_nickname {
+      width: 100% !important;
+      height: 30px !important;
+      background: #313131 !important;
+      border-radius: 5px !important;
+      margin-bottom: 6px;
+      font-size: 12px !important;
+      font-family: Source Han Sans CN;
+      font-weight: 200;
+      color: #FFFFFF !important;
+    }
+    &_intro {
+      width: 100% !important;
+      height: 160px !important;
+      background: #313131 !important;
+      border-radius: 5px !important;
+      color: #fff !important;
+      font-size: 12px !important;
+      font-family: Source Han Sans CN;
+      font-weight: 200;
+      color: #FFFFFF !important;
+    }
+    &_uploadtip {
+      height: 11px;
+      line-height: 11px;
+      font-size: 10px;
+      font-family: Source Han Sans CN;
+      font-weight: 300;
+      color: #FFFFFF;
+      margin-bottom: 20px;
+    }
+    &_action {
+      width: 180px;
+      height: 40px;
+      border: 1px solid #FFFFFF;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 18px;
+      font-family: Source Han Sans CN;
+      font-weight: 400;
+      color: #FFFFFF;
+      cursor: pointer;
+    }
+    .avatar-uploader {
+      width: 120px;
+      height: 120px;
+      background: #313131;
+      border-radius: 5px;
+      margin-bottom: 27px;
+      /deep/ .ant-upload.ant-upload-select-picture-card {
+        width: 120px !important;
+        height: 120px !important;
+        background: #313131 !important;
+      }
+    }
+  }
+  :global {
+    .ant-upload.ant-upload-select-picture-card {
+      width: 120px !important;
+      height: 120px !important;
+      background: #313131 !important;
+    }
   }
 }

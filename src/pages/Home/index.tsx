@@ -29,27 +29,50 @@ const Index = () => {
   const onChange = (currentSlide: number) => {
     console.log(currentSlide);
   };
+  const isMobile = () => {
+    let flag = navigator.userAgent.match(
+      /(phone|pad|pod|iPhone|iPod|ios|iPad|Android|Mobile|BlackBerry|IEMobile|MQQBrowser|JUC|Fennec|wOSBrowser|BrowserNG|WebOS|Symbian|Windows Phone)/i
+    );
+    return flag;
+  }
+  const renderPcHeader = () => {
+    return (
+      <div className={styles.index_view_banner_header}>
+        <div className={styles.index_view_banner_header_main}>
+          <img
+            src={logo}
+            className={styles.index_view_banner_header_main_logo}
+          />
+          <ul className={styles.index_view_banner_header_main_nav}>
+            <li className={styles.index_view_banner_header_main_nav_item}>Fortuna</li>
+            <li className={styles.index_view_banner_header_main_nav_item}>Fortuna</li>
+            <li className={styles.index_view_banner_header_main_nav_item}>Fortuna</li>
+            <li className={styles.index_view_banner_header_main_nav_item}>Fortuna</li>
+          </ul>
+          <img
+            src={navIcon}
+            className={styles.index_view_banner_header_main_icon}
+          />
+        </div>
+      </div>
+    )
+  }
+  const renderMobileHeader = () => {
+    return (
+      <div className={styles.index_view_banner_header}>
+        <div className={styles.index_view_banner_header_main}>
+          <img
+            src={navIcon}
+            className={styles.index_view_banner_header_main_icon}
+          />
+        </div>
+      </div>
+    )
+  }
   return (
     <div className={styles.index_view}>
       <div className={styles.index_view_banner}>
-        <div className={styles.index_view_banner_header}>
-          <div className={styles.index_view_banner_header_main}>
-            <img
-              src={logo}
-              className={styles.index_view_banner_header_main_logo}
-            />
-            <ul className={styles.index_view_banner_header_main_nav}>
-              <li className={styles.index_view_banner_header_main_nav_item}>Fortuna</li>
-              <li className={styles.index_view_banner_header_main_nav_item}>Fortuna</li>
-              <li className={styles.index_view_banner_header_main_nav_item}>Fortuna</li>
-              <li className={styles.index_view_banner_header_main_nav_item}>Fortuna</li>
-            </ul>
-            <img
-              src={navIcon}
-              className={styles.index_view_banner_header_main_icon}
-            />
-          </div>
-        </div>
+        {isMobile() ? renderMobileHeader() : renderPcHeader()}
         <div className={styles.index_view_banner_main}>
           <h3 className={styles.index_view_banner_main_name}>UNBOX</h3>
           <p className={styles.index_view_banner_main_desc}>

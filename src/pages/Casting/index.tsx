@@ -4,7 +4,6 @@ import {
   Upload,
   Input
 } from 'antd';
-import isMobile from '../../utils';
 import styles from './index.module.less';
 import uploadIcon from '../../assets/images/upload.png';
 
@@ -15,9 +14,8 @@ const Casting = () => {
   useEffect(()=>{
     const container = document.getElementById('container');
     if (container != null) {
-      container.setAttribute('class', 'container' );
+      container.setAttribute('class', 'container casting_container' );
     }
-    console.log('isMobile', isMobile())
   }, []);
   const uploadButton = (
     <div>

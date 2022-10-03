@@ -10,7 +10,7 @@ const Exchange = () => {
   useEffect(()=>{
     const container = document.getElementById('container');
     if (container != null) {
-      container.setAttribute('class', 'container' );
+      container.setAttribute('class', 'container exchange_container' );
     }
   }, []);
   return (
