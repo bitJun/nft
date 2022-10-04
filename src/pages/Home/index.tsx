@@ -10,6 +10,8 @@ import right from '../../assets/images/home/right.png';
 import pic from '../../assets/images/home/pic.png';
 import tu from '../../assets/images/home/tu.png';
 import coin from '../../assets/images/T1Coin.png';
+import rightIcon from '../../assets/images/right.png';
+import leftIcon from '../../assets/images/left.png';
 import { useNavigate } from 'react-router-dom';
 import styles from './index.module.less';
 
@@ -93,6 +95,14 @@ const Index = () => {
           <p className={styles.index_view_banner_main_desc}>
           BECOME A UNIQUE <br/>NFT COLLECTOR
           </p>
+          <img
+            src={leftIcon}
+            className={styles.index_view_banner_main_left}
+          />
+          <img
+            src={rightIcon}
+            className={styles.index_view_banner_main_right}
+          />
         </div>
       </div>
       <div className={styles.index_view_actions}>
@@ -146,9 +156,9 @@ const Index = () => {
             box that has a high probability of getting double tokens, which means that 
             when you open the blind box, the player has a high probability of earning 
             double Tyche.</p>
-            <div className={styles.index_view_info_bling_main_btn}>
-              Enter Fortuna Metaverse
-            </div>
+            <Button className={styles.index_view_info_bling_main_btn}>
+              ENTER FORTUNA METAVERSE
+            </Button>
           </div>
           <img
             src={pic}
@@ -156,25 +166,27 @@ const Index = () => {
           />
         </div>
         <div className={styles.index_view_author}>
-          <div className={styles.index_view_author_swiper}>
-            <Carousel afterChange={onChange}>
-              {
-                [1,2,3,4,5,6].map((item:number)=>
-                  <img
-                    src='https://gimg3.baidu.com/search/src=http%3A%2F%2Fpics7.baidu.com%2Ffeed%2F03087bf40ad162d99cceb8fcaea5a0e78b13cdb0.jpeg%3Ftoken%3D5b50aec78619ebf9158c666e8a73ef1f&refer=http%3A%2F%2Fwww.baidu.com&app=2021&size=f360,240&n=0&g=0n&q=75&fmt=auto?sec=1664816400&t=4bc4bab899c142a89ce9f811ac9dd504'
-                    className={styles.index_view_author_swiper_img}
-                    key={item}
-                  />
-                )
-              }
-            </Carousel>
+          <div className={styles.index_view_author_banner}>
+            <div className={styles.index_view_author_swiper}>
+              <Carousel afterChange={onChange}>
+                {
+                  [1,2,3,4,5,6].map((item:number)=>
+                    <img
+                      src='https://gimg3.baidu.com/search/src=http%3A%2F%2Fpics7.baidu.com%2Ffeed%2F03087bf40ad162d99cceb8fcaea5a0e78b13cdb0.jpeg%3Ftoken%3D5b50aec78619ebf9158c666e8a73ef1f&refer=http%3A%2F%2Fwww.baidu.com&app=2021&size=f360,240&n=0&g=0n&q=75&fmt=auto?sec=1664816400&t=4bc4bab899c142a89ce9f811ac9dd504'
+                      className={styles.index_view_author_swiper_img}
+                      key={item}
+                    />
+                  )
+                }
+              </Carousel>
+            </div>
           </div>
           <div className={styles.index_view_author_detail}>
             <h3 className={styles.index_view_author_detail_title}>
               <span>AUT</span>HOR
             </h3>
             <p className={styles.index_view_author_detail_desc}>Authors are at the heart of the Fortuna platform, they come from industry brands, artists, leaders and whale collectors who mint and sell NFTs through the platform.</p>
-            <p className={styles.index_view_author_detail_desc}>The platform provides authors with mint NFT tools for free. The author's creativity and imagination will easily become reality here, and the value of NFT will spread to the metaverse infinitely.</p>
+            <p className={styles.index_view_author_detail_desc} style={{marginBottom: '0'}}>The platform provides authors with mint NFT tools for free. The author's creativity and imagination will easily become reality here, and the value of NFT will spread to the metaverse infinitely.</p>
             <div className={styles.index_view_author_detail_action}>
               <div className={styles.index_view_author_detail_action_item}>
               Author Metaverse
@@ -199,7 +211,7 @@ const Index = () => {
                 <div className={styles.index_view_commodity_list_item_main}>
                   <div className={styles.index_view_commodity_list_item_main_info}>
                     # 666008 NFT name
-                    <span>18/50</span>
+                    <span>18/ 50</span>
                   </div>
                   <p className={styles.index_view_commodity_list_item_main_desc}>DOOOFJUCNUDOA</p>
                   <div className={styles.index_view_commodity_list_item_main_action}>
@@ -242,17 +254,17 @@ const Index = () => {
           <div className={styles.index_view_others_contact}>
             <div className={styles.index_view_others_contact_main}>
               <h3 className={styles.index_view_others_contact_title}>CONTACT</h3>
-              <p className={styles.index_view_others_contact_label}>create a guild</p>
+              <p className={styles.index_view_others_contact_label}>CREATE A GUILD</p>
               <input
                 type='text'
                 className={styles.index_view_others_contact_value}
               />
-              <p className={styles.index_view_others_contact_label}>invite author</p>
+              <p className={styles.index_view_others_contact_label}>INVITE AUTHOR</p>
               <input
                 type='text'
                 className={styles.index_view_others_contact_value}
               />
-              <p className={styles.index_view_others_contact_label} style={{marginBottom: '50px'}}>hold events</p>
+              <p className={styles.index_view_others_contact_label} style={{marginBottom: '50px'}}>HOLD EVENTS</p>
               <input
                 type='text'
                 className={styles.index_view_others_contact_value}

@@ -14,7 +14,14 @@
   -moz-osx-font-smoothing: grayscale;
   -webkit-text-size-adjust: 100%;
 }
-
+@font-face {
+  font-family: '812';
+  src: url('./assets/font/812-CAI978.ttf') format('truetype');
+}
+@font-face {
+  font-family: '811';
+  src: url('./assets/font/811-CAI978.ttf') format('truetype');
+}
 a {
   font-weight: 500;
   color: #646cff;

@@ -27,6 +27,7 @@
           display: flex;
           align-items: center;
           height: 31px;
+          position: relative;
           &_logo {
             height: 31px;
             width: 223px;
@@ -85,6 +86,20 @@
           line-height: 46px;
           letter-spacing: 3px;
         }
+        &_right {
+          position: absolute;
+          top: 580px;
+          left: 425px;
+          width: 25px;
+          height: 25px;
+        }
+        &_left {
+          position: absolute;
+          top: 690px;
+          left: -20px;
+          width: 25px;
+          height: 25px;
+        }
       }
     }
     &_actions {
@@ -104,8 +119,8 @@
         display: flex;
         align-items: center;
         justify-content: center;
-        font-size: 22px;
-        font-weight: normal;
+        font-size: 22px !important;
+        font-weight: normal !important;
         color: #FFFFFF !important;
         letter-spacing: 1px;
         cursor: pointer;
@@ -168,15 +183,16 @@
             height: 40px;
             background: #FFFFFF;
             padding: 0 18px 0 21px;
-            font-size: 16px;
+            font-size: 16px !important;
             font-family: 812;
             font-weight: normal;
-            color: #BC3C60;
+            color: #BC3C60 !important;
             box-sizing: border-box;
             cursor: pointer;
             &_icon {
-              width: 14px;
-              height: 20px;
+              margin-left: 34px;
+              width: 8px;
+              height: auto;
             }
           }
         }
@@ -195,10 +211,11 @@
         position: relative;
         display: flex;
         width: 1305px;
-        margin: 0 auto 127px auto;
+        margin: 0 auto 210px auto;
         background-image: url('../../assets/images/01.png');
         background-size: 486px 343px;
         background-position: 0 63px;
+        background-repeat: no-repeat;
         &_main {
           flex: 1;
           &_title {
@@ -210,6 +227,7 @@
             padding-bottom: 36px;
             border-bottom: 9px dashed #fff;
             margin-bottom: 89px;
+            font-family: 812;
             span {
               color: #ED2E56;
               margin-right: 10px;
@@ -220,20 +238,22 @@
             font-family: 811;
             font-weight: normal;
             color: #FFFFFF;
+            font-family: 811;
             line-height: 32px;
             margin-bottom: 49px;
           }
           &_btn {
-            width: 370px;
-            height: 42px;
+            width: 370px !important;
+            height: 42px !important;
             border: 2px solid #FFFFFF;
             display: flex;
             align-items: center;
             justify-content: center;
-            font-size: 21px;
+            font-size: 21px !important;
             font-family: 812;
             font-weight: normal;
-            color: #FFFFFF;
+            color: #FFFFFF !important;
+            background: none !important;
           }
         }
         &_banner {
@@ -247,23 +267,23 @@
       margin: 0 auto 45px auto;
       display: flex;
       justify-content: space-between;
-      position: relative;
-      background-image: url('../../assets/images/02.png');
-      background-size: 571px 343px;
-      background-position: 717px 83px;
       &_swiper {
-        height: 1110px;
-        width: 528px;
+        height: 804px;
+        width: 520px;
         &_img {
-          height: 1110px;
-        width: 528px;
+          height: 800px;
+          width: 400px;
         }
       }
       &_detail {
-        padding-top: 285px;
         width: 723px;
+        position: relative;
+        background-image: url('../../assets/images/02.png');
+        background-size: 571px 343px;
+        background-position: 154px 0px;
+        background-repeat: no-repeat;
         &_title {
-          padding-top: 45px;
+          padding-top: 202px;
           padding-bottom: 50px;
           border-bottom: 9px dashed #fff;
           font-size: 70px;
@@ -272,6 +292,7 @@
           color: #fff;
           width: 723px;
           margin-bottom: 89px;
+          text-align: right;
           span {
             color: #EE0A6A;
           }
@@ -282,7 +303,7 @@
           font-weight: normal;
           color: #FFFFFF;
           line-height: 35px;
-          margin-bottom: 30px;
+          margin-bottom: 20px;
         }
         &_action {
           display: flex;
@@ -367,7 +388,7 @@
                 width: 152px !important;
                 height: 36px !important;
                 border: 2px solid #FFFFFF !important;
-                font-size: 17px;
+                font-size: 17px !important;
                 font-family: 811;
                 font-weight: normal;
                 color: #FFFFFF !important;
@@ -392,6 +413,7 @@
       background-image: url('../../assets/images/03.png');
       background-size: 571px 343px;
       background-position: 0 63px;
+      background-repeat: no-repeat;
       &_title {
         padding-top: 239px;
         padding-bottom: 36px;
@@ -430,6 +452,7 @@
       background-image: url('../../assets/images/04.png');
       background-size: 571px 343px;
       background-position: 0 63px;
+      background-repeat: no-repeat;
       &_title {
         padding-top: 203px;
         padding-bottom: 28px;
@@ -482,7 +505,7 @@
       &_contact {
         width: 613px;
         height: 650px;
-        border: 1px solid #FFFFFF;
+        border: 1px solid rgba(255,255,255,0.37);
         // opacity: 0.37;
         position: relative;      
         &_main {
@@ -598,9 +621,9 @@
         display: flex;
         align-items: center;
         justify-content: center;
-        font-size: 22px;
+        font-size: 22px !important;
         font-family: 812;
-        font-weight: normal;
+        font-weight: normal !important;
         color: #FFFFFF !important;
         letter-spacing: 1px;
         cursor: pointer;
@@ -678,6 +701,7 @@
             border-bottom: 9px dashed #fff;
             margin-bottom: 20px;
             text-indent: 15px;
+            font-family: 812;
             span {
               color: #ED2E56;
               margin-right: 10px;
@@ -717,6 +741,7 @@
         &_title {
           font-size: 48px;
           font-weight: normal;
+          font-family: 812;
           color: #fff;
           padding-top: 6px;
           padding-bottom: 36px;
@@ -757,6 +782,7 @@
       &_title {
         font-size: 48px;
         font-weight: normal;
+        font-family: 812;
         color: #fff;
         padding-top: 6px;
         padding-bottom: 36px;
@@ -823,6 +849,7 @@
       &_title {
         font-size: 48px;
         font-weight: normal;
+        font-family: 812;
         color: #fff;
         padding-top: 6px;
         padding-bottom: 36px;
@@ -852,6 +879,7 @@
       &_title {
         font-size: 48px;
         font-weight: normal;
+        font-family: 812;
         color: #fff;
         padding-top: 6px;
         padding-bottom: 36px;
@@ -878,6 +906,7 @@
           font-size: 48px;
           font-weight: normal;
           color: #fff;
+          font-family: 812;
           padding-top: 6px;
           padding-bottom: 36px;
           margin-bottom: 20px;
@@ -891,6 +920,7 @@
           font-weight: normal;
           margin-bottom: 30px;
           line-height: 35px;
+          font-family: 811;
           color: #ffffff;
           span {
             color: #ED2E56;
@@ -898,7 +928,7 @@
         }
       }
       &_contact {
-        // border: 1px solid #FFFFFF;
+       border: 1px solid rgba(255,255,255,0.37);
         position: relative; 
         padding: 15px;
         &_title {
@@ -906,6 +936,7 @@
           font-weight: normal;
           color: #fff;
           padding-top: 6px;
+          font-family: 812;
           padding-bottom: 36px;
           margin-bottom: 20px;
           span {
