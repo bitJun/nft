@@ -170,29 +170,41 @@ const BaseLayout = ({ children }: LayoutProps) => {
             />
           </div>
           <div className='mobile-layout-nav'>
-            <div className='mobile-layout-nav-item' onClick={(e:any)=>{goLink('/page/mine', e)}}>
+            <div
+              className={`mobile-layout-nav-item ${pathname == '/page/mine' ? 'active' : ''}`}
+              onClick={(e:any)=>{goLink('/page/mine', e)}}>
               我的作品
             </div>
-            <div className='mobile-layout-nav-item' onClick={(e:any)=>{goLink('/page/identity', e)}}>
+            <div
+              className={`mobile-layout-nav-item ${pathname == '/page/identity' ? 'active' : ''}`}
+              onClick={(e:any)=>{goLink('/page/identity', e)}}>
               全部作品
             </div>
-            <div className='mobile-layout-nav-item' onClick={(e:any)=>{goLink('/page/casting', e)}}>
+            <div
+              className={`mobile-layout-nav-item ${pathname == '/page/casting' ? 'active' : ''}`}
+              onClick={(e:any)=>{goLink('/page/casting', e)}}>
               商城
             </div>
-            <div className='mobile-layout-nav-item' onClick={(e:any)=>{goLink('/page/exchange', e)}}>
+            <div
+              className={`mobile-layout-nav-item ${pathname == '/page/exchange' ? 'active' : ''}`}
+              onClick={(e:any)=>{goLink('/page/exchange', e)}}>
               Tyche交换池
             </div>
-            <div className='mobile-layout-nav-item' onClick={(e:any)=>{goLink('/page/unique', e)}}>
+            <div
+              className={`mobile-layout-nav-item ${pathname == '/page/unique' ? 'active' : ''}`}
+              onClick={(e:any)=>{goLink('/page/unique', e)}}>
               DAO社区
             </div>
-            <div className='mobile-layout-nav-item' onClick={(e:any)=>{goLink('/page/register', e)}}>
+            <div
+              className={`mobile-layout-nav-item ${pathname == '/page/register' ? 'active' : ''}`}
+              onClick={(e:any)=>{goLink('/page/register', e)}}>
               投票
             </div>
           </div>
           <div className='mobile-layout-other'>
             <div className='mobile-layout-other-main'>
               <div
-                className='mobile-layout-other-main-item'
+                className={`mobile-layout-other-main-item ${pathname == '/page/register' ? 'active' : ''}`}
                 onClick={(e:any)=>{goLink('/page/register', e)}}
               >
                 加入公会
