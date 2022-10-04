@@ -11,7 +11,7 @@ const Identity = () => {
   useEffect(()=>{
     const container = document.getElementById('container');
     if (container != null) {
-      container.setAttribute('class', 'container identity_container' );
+      container.setAttribute('class', 'container mine_container');
     }
   }, []);
   const isMobile = () => {
@@ -24,8 +24,8 @@ const Identity = () => {
     console.log(currentSlide);
   };
   return (
-    <div className={styles.identity_view}>
-      <div className={styles.identity_view_main}>
+    <div className={`${styles.identity_view}`}>
+      <div className={`${styles.identity_view_main} ${styles.identity_container}`}>
         {
           isMobile() ? (
             <Carousel afterChange={onChange}>
