@@ -96,8 +96,8 @@ const Index = () => {
         </div>
       </div>
       <div className={styles.index_view_actions}>
-        <div className={styles.index_view_actions_item}>FUKU</div>
-        <div className={styles.index_view_actions_item}>SHOP</div>
+        <Button className={styles.index_view_actions_item}>FUKU</Button>
+        <Button className={styles.index_view_actions_item}>SHOP</Button>
       </div>
       <div className={styles.index_view_feels}>
         {
