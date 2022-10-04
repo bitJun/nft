@@ -33,7 +33,8 @@ body {
 }
 
 p,
-h4 {
+h4,
+ul {
   margin: 0;
 }
 h1 {
