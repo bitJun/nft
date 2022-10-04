@@ -1,5 +1,5 @@
 import { useState } from 'react'
-import { BrowserRouter, Route, Routes } from "react-router-dom";
+import { BrowserRouter, Route, Routes, HashRouter } from "react-router-dom";
 import { AliveScope } from "react-activation";
 import PageLayout from './Layout/PageLayout';
 import Index from './pages/Home';
@@ -14,7 +14,7 @@ import 'antd/dist/antd.css';
 function App() {
   return (
     <AliveScope>
-      <BrowserRouter>
+      <HashRouter>
         <Routes>
           <Route path="/" element={<Index />} />
         </Routes>
@@ -28,7 +28,7 @@ function App() {
             <Route path="/page/identity" element={<Identity />} />
           </Route>
         </Routes>
-      </BrowserRouter>
+      </HashRouter>
     </AliveScope>
   )
 }
