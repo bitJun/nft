@@ -1,8 +1,9 @@
 import { ReactNode, useState } from 'react';
 import {
-  Drawer
+  Drawer,
+  Button
 } from 'antd';
-import { useNavigate, useParams } from 'react-router-dom';
+import { useNavigate, useLocation } from 'react-router-dom';
 import logo from '../../assets/images/logo_white.png';
 import icon from '../../assets/images/icon.png';
 import coin from '../../assets/images/coin.png';
@@ -15,6 +16,9 @@ interface LayoutProps {
 
 const BaseLayout = ({ children }: LayoutProps) => {
   const navigate = useNavigate();
+  const location = useLocation();
+  console.log('location', location);
+  let pathname = location.pathname || '';
   const [open, setOpen] = useState<boolean>(false);
   const showDrawer = () => {
     setOpen(true);
@@ -60,29 +64,47 @@ const BaseLayout = ({ children }: LayoutProps) => {
           />
         </div>
         <div className='container-layout-nav'>
-          <div className='container-layout-nav-item' onClick={(e:any)=>{goLink('/page/mine', e)}}>
+          <div
+            className={`container-layout-nav-item ${pathname == '/page/mine' ? 'active' : ''}`}
+            onClick={(e:any)=>{goLink('/page/mine', e)}}
+          >
             我的作品
           </div>
-          <div className='container-layout-nav-item' onClick={(e:any)=>{goLink('/page/identity', e)}}>
+          <div
+            className={`container-layout-nav-item ${pathname == '/page/identity' ? 'active' : ''}`}
+            onClick={(e:any)=>{goLink('/page/identity', e)}}
+          >
             全部作品
           </div>
-          <div className='container-layout-nav-item' onClick={(e:any)=>{goLink('/page/casting', e)}}>
+          <div
+            className={`container-layout-nav-item ${pathname == '/page/casting' ? 'active' : ''}`}
+            onClick={(e:any)=>{goLink('/page/casting', e)}}
+          >
             商城
           </div>
-          <div className='container-layout-nav-item' onClick={(e:any)=>{goLink('/page/exchange', e)}}>
+          <div
+            className={`container-layout-nav-item ${pathname == '/page/exchange' ? 'active' : ''}`}
+            onClick={(e:any)=>{goLink('/page/exchange', e)}}
+          >
             Tyche交换池
           </div>
-          <div className='container-layout-nav-item' onClick={(e:any)=>{goLink('/page/unique', e)}}>
+          <div
+            className={`container-layout-nav-item ${pathname == '/page/unique' ? 'active' : ''}`}
+            onClick={(e:any)=>{goLink('/page/unique', e)}}
+          >
             DAO社区
           </div>
-          <div className='container-layout-nav-item' onClick={(e:any)=>{goLink('/page/register', e)}}>
+          <div
+            className={`container-layout-nav-item ${pathname == '/page/register' ? 'active' : ''}`}
+            onClick={(e:any)=>{goLink('/page/register', e)}}
+          >
             投票
           </div>
         </div>
         <div className='container-layout-other'>
           <div className='container-layout-other-main'>
             <div
-              className='container-layout-other-main-item'
+              className={`container-layout-other-main-item ${pathname == '/page/register' ? 'active' : ''}`}
               onClick={(e:any)=>{goLink('/page/register', e)}}
             >
               加入公会
@@ -91,7 +113,7 @@ const BaseLayout = ({ children }: LayoutProps) => {
           </div>
         </div>
         <div className='container-layout-actions'>
-          <div className='container-layout-actions-item'>链接钱包</div>
+          <Button className='container-layout-actions-item'>链接钱包</Button>
         </div>
       </div>
     )

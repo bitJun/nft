@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { Carousel, Drawer } from 'antd';
+import { Carousel, Drawer, Button } from 'antd';
 import logo from '../../assets/images/logo.png';
 import navIcon from '../../assets/images/nav.png';
 import banner1 from '../../assets/images/home/banner1.png';
@@ -118,7 +118,7 @@ const Index = () => {
               src={bottom}
               className={styles.index_view_feels_content_container_bottom}
             />
-            <div
+            <Button
               className={styles.index_view_feels_content_container_action}
               onClick={(e:any)=>{goLink('/page/mine' ,e)}}
             >
@@ -127,7 +127,7 @@ const Index = () => {
                 src={right}
                 className={styles.index_view_feels_content_container_action_icon}
               />
-            </div>
+            </Button>
           </div>
         </div>
       </div>

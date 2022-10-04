@@ -2,7 +2,8 @@ import { useEffect, useState } from 'react';
 import { LoadingOutlined, PlusOutlined } from '@ant-design/icons';
 import {
   Upload,
-  Input
+  Input,
+  Button
 } from 'antd';
 import styles from './index.module.less';
 import uploadIcon from '../../assets/images/upload.png';
@@ -94,7 +95,7 @@ const Casting = () => {
                 className={styles.casting_view_main_control_item_textarea}
               />
             </div>
-            <div className={styles.casting_view_main_control_action}>立即铸造</div>
+            <Button className={styles.casting_view_main_control_action}>立即铸造</Button>
           </div>
           <div className={styles.casting_view_main_control_right}>
             <div className={styles.casting_view_main_control_item}>

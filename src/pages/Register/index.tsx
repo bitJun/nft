@@ -3,7 +3,8 @@ import {
   Form,
   Input,
   Upload,
-  message
+  message,
+  Button
 } from 'antd';
 import { LoadingOutlined, PlusOutlined } from '@ant-design/icons';
 import uploadIcon from '../../assets/images/upload.png';
@@ -61,7 +62,7 @@ const Register = () => {
           className={styles.register_view_intro}
         />
         <p>注：500个字符以内。</p>
-        <div className={styles.register_view_action}>立即注册</div>
+        <Button className={styles.register_view_action}>立即注册</Button>
       </div>
     </div>
   )

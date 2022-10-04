@@ -2,7 +2,8 @@ import { useEffect, useState } from 'react';
 import ExChangeIcon from '../../assets/images/exchange.png';
 import T1Coin from '../../assets/images/T1Coin.png';
 import {
-  Input
+  Input,
+  Button
 } from 'antd';
 import styles from './index.module.less';
 
@@ -18,13 +19,13 @@ const Exchange = () => {
       <h3 className={styles.exchange_view_title}>买入</h3>
       <p className={styles.exchange_view_desc}>
         更多的TYCHE
-        <div className={styles.exchange_view_desc_action}>
+        <Button className={styles.exchange_view_desc_action}>
           <img
             src={ExChangeIcon}
             className={styles.exchange_view_desc_action_icon}
           />
           卖出
-        </div>
+        </Button>
       </p>
       <img
         src={T1Coin}
@@ -46,7 +47,9 @@ const Exchange = () => {
           className={styles.exchange_view_main_value}
           placeholder='请输入该商品的总价'
         />
-        <div className={styles.exchange_view_main_action}>立即购买</div>
+        <div className={styles.exchange_view_main_flex}>
+          <Button className={styles.exchange_view_main_action}>立即购买</Button>
+        </div>
       </div>
     </div>
   )

@@ -4,6 +4,7 @@ import {
   Select,
   Upload,
   message,
+  Button
 } from 'antd';
 
 import { InboxOutlined, LoadingOutlined, PlusOutlined } from '@ant-design/icons';
@@ -119,7 +120,7 @@ const Unique = () => {
             />
           </div>
         </div>
-        <div className={styles.unique_view_main_action}>立即铸造</div>
+        <Button className={styles.unique_view_main_action}>立即铸造</Button>
       </div>
     </div>
   )

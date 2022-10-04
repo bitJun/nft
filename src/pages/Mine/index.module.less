@@ -10,8 +10,7 @@
   .mine_view {
     height: 100vh;
     width: 100%;
-    padding-top: 84px;
-    padding-left: 90px;
+    padding: 84px 0 30px 90px;
     box-sizing: border-box;
     overflow-y: scroll;
     position: relative;
@@ -54,20 +53,23 @@
           height: 680px;
         }
         &_action {
-          position: absolute;
-          top: 495px;
-          left: 143px;
-          width: 200px;
-          height: 35px;
-          background: #FFFFFF;
+          position: absolute !important;
+          top: 495px !important;
+          left: 143px !important;
+          width: 200px !important;
+          height: 35px !important;
+          background: #FFFFFF !important;
           border-radius: 0px;
           font-size: 18px;
           font-family: Source Han Sans CN;
           font-weight: 400;
-          color: #000000;
+          color: #000000 !important;
           display: flex;
           align-items: center;
           justify-content: center;
+        }
+        &_action:hover {
+          color: #40a9ff !important;
         }
       }
       &_item:last-child {
@@ -117,11 +119,15 @@
               font-size: 16px;
               font-family: SourceHanSansCN;
               font-weight: 400;
-              color: #FFFFFF;
+              background: none;
+            }
+            &_edit:hover {
+              color: #40a9ff !important;
             }
             &_share {
               width: 21px;
               height: 24px;
+              cursor: pointer;
             }
           }
         }

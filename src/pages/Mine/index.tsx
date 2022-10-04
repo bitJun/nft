@@ -1,4 +1,7 @@
 import { useEffect, useState } from 'react';
+import {
+  Button
+} from 'antd';
 import styles from './index.module.less';
 import casting from '../../assets/images/pic.png';
 import shareIcon from '../../assets/images/share.png';
@@ -23,14 +26,14 @@ const Mine = () => {
             src={casting}
             className={styles.mine_view_casting_item_img}
           />
-          <div className={styles.mine_view_casting_item_action}>铸造独特款 NFT</div>
+          <Button className={styles.mine_view_casting_item_action}>铸造独特款 NFT</Button>
         </div>
         <div className={styles.mine_view_casting_item}>
           <img
             src={casting}
             className={styles.mine_view_casting_item_img}
           />
-          <div className={styles.mine_view_casting_item_action}>铸造限量款 NFT</div>
+          <Button className={styles.mine_view_casting_item_action}>铸造限量款 NFT</Button>
         </div>
       </div>
       <div className={styles.mine_view_nft}>
@@ -42,7 +45,7 @@ const Mine = () => {
               className={styles.mine_view_nft_list_item_img}
             />
             <div className={styles.mine_view_nft_list_item_action}>
-              <div className={styles.mine_view_nft_list_item_action_edit}>编辑</div>
+              <Button className={styles.mine_view_nft_list_item_action_edit}>编辑</Button>
               <img
                 src={shareIcon}
                 className={styles.mine_view_nft_list_item_action_share}
@@ -55,7 +58,7 @@ const Mine = () => {
               className={styles.mine_view_nft_list_item_img}
             />
             <div className={styles.mine_view_nft_list_item_action}>
-              <div className={styles.mine_view_nft_list_item_action_edit}>编辑</div>
+              <Button className={styles.mine_view_nft_list_item_action_edit}>编辑</Button>
               <img
                 src={shareIcon}
                 className={styles.mine_view_nft_list_item_action_share}
@@ -68,7 +71,7 @@ const Mine = () => {
               className={styles.mine_view_nft_list_item_img}
             />
             <div className={styles.mine_view_nft_list_item_action}>
-              <div className={styles.mine_view_nft_list_item_action_edit}>编辑</div>
+              <Button className={styles.mine_view_nft_list_item_action_edit}>编辑</Button>
               <img
                 src={shareIcon}
                 className={styles.mine_view_nft_list_item_action_share}

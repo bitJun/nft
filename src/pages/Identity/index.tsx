@@ -1,7 +1,7 @@
 import { useEffect, useState } from 'react';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { Pagination, Navigation } from "swiper";
-import { Carousel } from 'antd';
+import { Carousel, Button } from 'antd';
 import 'swiper/css';
 import "swiper/css/pagination";
 import "swiper/css/navigation";
@@ -77,9 +77,11 @@ const Identity = () => {
         <p className={styles.identity_view_info_author}>作者名称</p>
         <p className={styles.identity_view_info_intro}>作者简短的小介绍作者简短的小介绍作者简短的小介绍作者简短的小介绍</p>
         <p className={styles.identity_view_info_price}>$ <span>000.00</span></p>
-        <a className={styles.identity_view_info_action}>
-        立即购买
-        </a>
+        <div className={styles.identity_view_info_flex}>
+          <Button className={styles.identity_view_info_action}>
+          立即购买
+          </Button>
+        </div>
       </div>
     </div>
   )
