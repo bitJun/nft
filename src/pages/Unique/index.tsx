@@ -20,9 +20,9 @@ const Unique = () => {
   const [loading, setLoading] = useState(false);
   const [imageUrl, setImageUrl] = useState<string>();
   useEffect(()=>{
-    const container = document.getElementById('container');
+    const container = document.body;
     if (container != null) {
-      container.setAttribute('class', 'container unique_container');
+      container.className = 'unique_container';
     }
   }, []);
 

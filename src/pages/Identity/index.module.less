@@ -1,17 +1,9 @@
 :global {
   .identity_container {
-    background-image: url('../../assets/images/Identity.png');
-    z-index: 99;
-    background-size: 100% auto;
+    background-image: url('../../assets/images/identity_bg.jpg') !important;
+    background-size: cover;
     background-repeat: no-repeat;
   }
-}
-
-.identity_container {
-  background-image: url('../../assets/images/Identity.png');
-  z-index: 99;
-  background-size: cover;
-  background-position: 0px 0;
 }
 @media only screen and (min-width: 750px) {
   .identity_view {
@@ -25,8 +17,10 @@
       width: 350px;
       height: 100vh;
       background: #1A1D1F;
-      padding-top: 219px;
       box-sizing: border-box;
+      display: flex;
+      align-items: center;
+      justify-content: center;
       &_logo {
         display: flex;
         align-items: center;
@@ -98,6 +92,14 @@
     &_main {
       width: calc(100vw - 320px - 350px);
       padding: 779px 43px 0 73px;
+      position: relative;
+      &_img {
+        position: absolute;
+        width: 400px;
+        left: 50%;
+        transform: translateX(-50%);
+        top: 100px;
+      }
       &_mySwiper {
         &_item {
           width: 147px !important;
@@ -125,6 +127,8 @@
     background-repeat: no-repeat;
     height: 100vh;
     width: 100%;
+    padding-bottom: 100px;
+    box-sizing: border-box;
     box-sizing: border-box;
     overflow-y: scroll;
     position: relative;
@@ -136,7 +140,7 @@
     }
     &_info {
       width: 100%;
-      background: #1A1D1F;
+      // background: #1A1D1F;
       padding-top: 30px;
       box-sizing: border-box;
       &_logo {

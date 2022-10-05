@@ -16,9 +16,9 @@ const Register = () => {
   const [loading, setLoading] = useState(false);
   const [imageUrl, setImageUrl] = useState<string>();
   useEffect(()=>{
-    const container = document.getElementById('container');
+    const container = document.body;
     if (container != null) {
-      container.setAttribute('class', 'container');
+      container.className = 'register_container';
     }
   }, []);
 
@@ -36,7 +36,9 @@ const Register = () => {
   return (
     <div className={styles.register_view}>
       <h3 className={styles.register_view_title}>注册</h3>
-      <p className={styles.register_view_desc}>成为NFT设计师</p>
+      <div className={styles.register_view_info}>
+        <p className={styles.register_view_desc}>成为NFT设计师</p>
+      </div>
       <div className={styles.register_view_container}>
         <h4 className={styles.register_view_subtitle}>上传头像</h4>
         <p className={styles.register_view_uploadtip}>( 支持JPEG、PNG图片文件，文件大小 2MB以内 )</p>

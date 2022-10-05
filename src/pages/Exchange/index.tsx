@@ -9,24 +9,26 @@ import styles from './index.module.less';
 
 const Exchange = () => {
   useEffect(()=>{
-    const container = document.getElementById('container');
+    const container = document.body;
     if (container != null) {
-      container.setAttribute('class', 'container exchange_container' );
+      container.className = 'exchange_container';
     }
   }, []);
   return (
     <div className={styles.exchange_view}>
       <h3 className={styles.exchange_view_title}>买入</h3>
-      <p className={styles.exchange_view_desc}>
-        更多的TYCHE
-        <Button className={styles.exchange_view_desc_action}>
-          <img
-            src={ExChangeIcon}
-            className={styles.exchange_view_desc_action_icon}
-          />
-          卖出
-        </Button>
-      </p>
+      <div className={styles.exchange_view_info}>
+        <p className={styles.exchange_view_desc}>
+          更多的TYCHE
+          <Button className={styles.exchange_view_desc_action}>
+            <img
+              src={ExChangeIcon}
+              className={styles.exchange_view_desc_action_icon}
+            />
+            卖出
+          </Button>
+        </p>
+      </div>
       <img
         src={T1Coin}
         className={styles.exchange_view_img}

@@ -8,9 +8,9 @@ import shareIcon from '../../assets/images/share.png';
 
 const Mine = () => {
   useEffect(()=>{
-    const container = document.getElementById('container');
+    const container = document.body;
     if (container != null) {
-      container.setAttribute('class', 'container mine_container');
+      container.className = 'mine_container';
     }
   }, []);
   return (
@@ -26,14 +26,18 @@ const Mine = () => {
             src={casting}
             className={styles.mine_view_casting_item_img}
           />
-          <Button className={styles.mine_view_casting_item_action}>铸造独特款 NFT</Button>
+          <div className={styles.mine_view_casting_item_flex}>
+            <Button className={styles.mine_view_casting_item_action}>铸造独特款 NFT</Button>
+          </div>
         </div>
         <div className={styles.mine_view_casting_item}>
           <img
             src={casting}
             className={styles.mine_view_casting_item_img}
           />
-          <Button className={styles.mine_view_casting_item_action}>铸造限量款 NFT</Button>
+          <div className={styles.mine_view_casting_item_flex}>
+            <Button className={styles.mine_view_casting_item_action}>铸造限量款 NFT</Button>
+          </div>
         </div>
       </div>
       <div className={styles.mine_view_nft}>

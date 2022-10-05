@@ -225,7 +225,7 @@ const Index = () => {
                 <div className={styles.index_view_commodity_list_item_main}>
                   <div className={styles.index_view_commodity_list_item_main_info}>
                     # 666008 NFT name
-                    <span>18/ 50</span>
+                    <span>18 / 50</span>
                   </div>
                   <p className={styles.index_view_commodity_list_item_main_desc}>DOOOFJUCNUDOA</p>
                   <div className={styles.index_view_commodity_list_item_main_action}>
@@ -255,9 +255,19 @@ const Index = () => {
           />
         </div>
         <div className={styles.index_view_guide}>
-          <h3 className={styles.index_view_guide_title}>
-            <span>GUI</span>DE
-          </h3>
+          {
+            isMobile() ? (
+              <div className={styles.index_view_guide_info}>
+                <h3 className={styles.index_view_guide_title}>
+                  <span>GUI</span>DE
+                </h3>
+              </div>
+            ) : (
+              <h3 className={styles.index_view_guide_title}>
+                <span>GUI</span>DE
+              </h3>
+            )
+          }
           <img
             src={tu}
             className={styles.index_view_guide_img}
