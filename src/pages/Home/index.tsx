@@ -12,6 +12,10 @@ import tu from '../../assets/images/home/tu.png';
 import coin from '../../assets/images/T1Coin.png';
 import rightIcon from '../../assets/images/right.png';
 import leftIcon from '../../assets/images/left.png';
+import shuiying01 from '../../assets/images/01.png';
+import shuiying02 from '../../assets/images/02.png';
+import shuiying03 from '../../assets/images/03.png';
+import shuiying04 from '../../assets/images/04.png';
 import { useNavigate } from 'react-router-dom';
 import styles from './index.module.less';
 
@@ -143,6 +147,10 @@ const Index = () => {
       </div>
       <div className={styles.index_view_info}>
         <div className={styles.index_view_info_bling}>
+          <img
+            src={shuiying01}
+            className={styles.index_view_info_bling_icon}
+          />
           <div className={styles.index_view_info_bling_main}>
             <h3 className={styles.index_view_info_bling_main_title}><span>BLIND</span>BOX</h3>
             <p className={styles.index_view_info_bling_main_desc}>Opening the Fuku blind box will give you the opportunity to collect NFTs. 
@@ -156,9 +164,11 @@ const Index = () => {
             box that has a high probability of getting double tokens, which means that 
             when you open the blind box, the player has a high probability of earning 
             double Tyche.</p>
-            <Button className={styles.index_view_info_bling_main_btn}>
-              ENTER FORTUNA METAVERSE
-            </Button>
+            <div className={styles.index_view_info_bling_main_flex}>
+              <Button className={styles.index_view_info_bling_main_btn}>
+                ENTER FORTUNA METAVERSE
+              </Button>
+            </div>
           </div>
           <img
             src={pic}
@@ -182,6 +192,10 @@ const Index = () => {
             </div>
           </div>
           <div className={styles.index_view_author_detail}>
+            <img
+              src={shuiying02}
+              className={styles.index_view_author_detail_icon}
+            />
             <h3 className={styles.index_view_author_detail_title}>
               <span>AUT</span>HOR
             </h3>
@@ -223,6 +237,10 @@ const Index = () => {
           </ul>
         </div>
         <div className={styles.index_view_token}>
+          <img
+            src={shuiying03}
+            className={styles.index_view_token_icon}
+          />
           <h3 className={styles.index_view_token_title}>
             <span>TYCHE</span>TOKEN
           </h3>
