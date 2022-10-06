@@ -71,7 +71,7 @@ const Casting = () => {
               <Upload
                 name="avatar"
                 listType="picture-card"
-                className={styles['avatar-uploade']}
+                className={styles['avatar-uploades']}
                 showUploadList={false}
                 action=""
               >
