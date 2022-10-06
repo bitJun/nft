@@ -222,9 +222,12 @@
         list-style-type: none;
         padding: 0;
         margin: 0;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
         &_item {
-          width: 100%;
-          margin-bottom: 20px;
+          width: calc((100vw - 45px) * 0.5);
+          margin-bottom: 15px;
           &_img {
             width: 100%;
             height: auto;
@@ -237,7 +240,7 @@
             align-items: center;
             justify-content: space-between;
             &_edit {
-              width: 156px !important;
+              width: 130px !important;
               height: 30px !important;
               border: 1px solid #FFFFFF;
               border-radius: 0px;
