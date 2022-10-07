@@ -91,8 +91,11 @@
     }
     &_main {
       width: calc(100vw - 320px - 350px);
-      padding: 779px 43px 0 73px;
+      padding: 779px 43px 100px 73px;
       position: relative;
+      height: 100vh;
+      overflow-y: scroll;
+      box-sizing: border-box;
       &_img {
         position: absolute;
         width: 400px;
@@ -112,6 +115,9 @@
           }
         }
       }
+    }
+    &_main::-webkit-scrollbar {
+      display: none;
     }
   }
   .identity_view::-webkit-scrollbar {
@@ -133,9 +139,22 @@
     overflow-y: scroll;
     position: relative;
     &_main {
-      
+      text-align: center;
       &_img {
-        width: 100%;
+        width: 50%;
+        margin-bottom: 100px;
+      }
+      &_mySwiper {
+        &_item {
+          width: calc((100vw / 3));
+          height: calc((100vw / 3));
+        }
+        :global {
+          .swiper-slide {
+            width: calc((100vw / 3));
+            height: calc((100vw / 3));
+          }
+        }
       }
     }
     &_info {
@@ -143,6 +162,7 @@
       // background: #1A1D1F;
       padding-top: 30px;
       box-sizing: border-box;
+      margin-bottom: 100px;
       &_logo {
         display: flex;
         align-items: center;

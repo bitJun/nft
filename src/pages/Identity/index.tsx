@@ -24,54 +24,8 @@ const Identity = () => {
   const onChange = (currentSlide: number) => {
     console.log(currentSlide);
   };
-  return (
-    <div className={`${styles.identity_view}`}>
-      <div className={`${styles.identity_view_main} ${styles.identity_container}`}>
-        <img
-          src={identityPng}
-          className={styles.identity_view_main_img}
-        />
-        {
-          isMobile() ? (
-            <Carousel afterChange={onChange}>
-              {
-                [1,2,3,4,5,6].map((item:number)=>
-                  <img
-                    src='https://gimg3.baidu.com/search/src=http%3A%2F%2Fpics7.baidu.com%2Ffeed%2F03087bf40ad162d99cceb8fcaea5a0e78b13cdb0.jpeg%3Ftoken%3D5b50aec78619ebf9158c666e8a73ef1f&refer=http%3A%2F%2Fwww.baidu.com&app=2021&size=f360,240&n=0&g=0n&q=75&fmt=auto?sec=1664816400&t=4bc4bab899c142a89ce9f811ac9dd504'
-                    className={styles.identity_view_main_img}
-                    key={item}
-                  />
-                )
-              }
-            </Carousel>
-          ) : (
-            <Swiper
-              slidesPerView={6}
-              spaceBetween={30}
-              slidesPerGroup={1}
-              loop={true}
-              loopFillGroupWithBlank={true}
-              pagination={{
-                clickable: true,
-              }}
-              navigation={true}
-              modules={[Pagination, Navigation]}
-              className={styles.identity_view_main_mySwiper}
-            >
-              {
-                [1,2,3,4,5,6,7,8,9,10].map((item:number)=>
-                  <SwiperSlide key={item}>
-                    <img
-                      src='https://gimg3.baidu.com/search/src=http%3A%2F%2Fpics7.baidu.com%2Ffeed%2F03087bf40ad162d99cceb8fcaea5a0e78b13cdb0.jpeg%3Ftoken%3D5b50aec78619ebf9158c666e8a73ef1f&refer=http%3A%2F%2Fwww.baidu.com&app=2021&size=f360,240&n=0&g=0n&q=75&fmt=auto?sec=1664816400&t=4bc4bab899c142a89ce9f811ac9dd504'
-                      className={styles.identity_view_main_mySwiper_item}
-                    />
-                  </SwiperSlide>
-                )
-              }
-            </Swiper>
-          )
-        }
-      </div>
+  const renderInfo = () => {
+    return (
       <div className={styles.identity_view_info}>
         <div>
           <div className={styles.identity_view_info_logo}>
@@ -90,6 +44,48 @@ const Identity = () => {
           </div>
         </div>
       </div>
+    )
+  }
+  return (
+    <div className={`${styles.identity_view}`}>
+      {
+        isMobile() &&
+        renderInfo()
+      }
+      <div className={`${styles.identity_view_main} ${styles.identity_container}`}>
+        <img
+          src={identityPng}
+          className={styles.identity_view_main_img}
+        />
+        <Swiper
+          slidesPerView={isMobile()? 3: 6}
+          spaceBetween={30}
+          slidesPerGroup={1}
+          loop={true}
+          loopFillGroupWithBlank={true}
+          pagination={{
+            clickable: true,
+          }}
+          navigation={true}
+          modules={[Pagination, Navigation]}
+          className={styles.identity_view_main_mySwiper}
+        >
+          {
+            [1,2,3,4,5,6,7,8,9,10].map((item:number)=>
+              <SwiperSlide key={item}>
+                <img
+                  src='https://gimg3.baidu.com/search/src=http%3A%2F%2Fpics7.baidu.com%2Ffeed%2F03087bf40ad162d99cceb8fcaea5a0e78b13cdb0.jpeg%3Ftoken%3D5b50aec78619ebf9158c666e8a73ef1f&refer=http%3A%2F%2Fwww.baidu.com&app=2021&size=f360,240&n=0&g=0n&q=75&fmt=auto?sec=1664816400&t=4bc4bab899c142a89ce9f811ac9dd504'
+                  className={styles.identity_view_main_mySwiper_item}
+                />
+              </SwiperSlide>
+            )
+          }
+        </Swiper>
+      </div>
+      {
+        !isMobile() &&
+        renderInfo()
+      }
     </div>
   )
 }
