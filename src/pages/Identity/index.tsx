@@ -6,6 +6,7 @@ import 'swiper/css';
 import "swiper/css/pagination";
 import "swiper/css/navigation";
 import identityPng from '../../assets/images/Identity.jpg';
+import identityBgPng from '../../assets/images/Identity/identity.jpg';
 import styles from './index.module.less';
 
 const Identity = () => {
@@ -53,6 +54,10 @@ const Identity = () => {
         renderInfo()
       }
       <div className={`${styles.identity_view_main} ${styles.identity_container}`}>
+        <img
+          src={identityBgPng}
+          className={styles.identity_view_main_bg}
+        />
         <img
           src={identityPng}
           className={styles.identity_view_main_img}

@@ -96,12 +96,21 @@
       height: 100vh;
       overflow-y: scroll;
       box-sizing: border-box;
+      &_bg {
+        position: absolute;
+        width: 380px;
+        left: 52%;
+        transform: translateX(-50%);
+        top: -60px;
+        z-index: 88;
+      }
       &_img {
         position: absolute;
         width: 400px;
         left: 50%;
         transform: translateX(-50%);
         top: 100px;
+        z-index: 99;
       }
       &_mySwiper {
         &_item {
@@ -140,6 +149,14 @@
     position: relative;
     &_main {
       text-align: center;
+      position: relative;
+      &_bg {
+        position: absolute;
+        width: 100%;
+        left: 0;
+        top: -60px;
+        z-index: 88;
+      }
       &_img {
         width: 50%;
         margin-bottom: 100px;
