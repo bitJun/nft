@@ -72,7 +72,7 @@ const Casting = () => {
     setOpen(false);
     setShow(false);
   }
-  const handleChange = (type, event) => {
+  const handleChange = (type:string, event:any) => {
     let value = event.target.value;
     if (type == 'title') {
       setTitle(value);
