@@ -95,6 +95,12 @@ const BaseLayout = ({ children }: LayoutProps) => {
             DAO社区
           </div>
           <div
+            className={`container-layout-nav-item ${pathname == '/page/governance' ? 'active' : ''}`}
+            onClick={(e:any)=>{goLink('/page/governance', e)}}
+          >
+            Fortuna治理
+          </div>
+          <div
             className={`container-layout-nav-item ${pathname == '/page/register' ? 'active' : ''}`}
             onClick={(e:any)=>{goLink('/page/register', e)}}
           >
