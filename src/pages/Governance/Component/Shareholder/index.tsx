@@ -10,7 +10,7 @@ import styles from './index.module.less';
 const {
   TextArea
 } = Input;
-const App = () => {
+const Shareholder = () => {
   const [isEmpty, setIsEmpty] = useState<boolean>(false);
   const [show, setShow] = useState<boolean>(false);
   const [open, setOpen] = useState<boolean>(false);
@@ -63,45 +63,40 @@ const App = () => {
     setOpen(true);
   }
   return (
-    <div className={styles.governance_main}>
-      <h3 className={styles.governance_main_title}>Fortuna治理</h3>
-      <div className={styles.governance_main_sub}>
-        <p className={styles.governance_main_desc}>
-          FUA代币代表了Fortuna治理中的提案权利，您可以自行为想法提案。
-          <Button className={styles.governance_main_desc_action} onClick={()=>{setIsEmpty(!isEmpty)}}>Fortuna购买</Button>
+    <div className={styles.shareholder_main}>
+      <h3 className={styles.shareholder_main_title}>股东分红</h3>
+      <div className={styles.shareholder_main_sub}>
+        <p className={styles.shareholder_main_desc}>
+          可以说明一下股东的分红简介时许规则。
         </p>
       </div>
-      <h4 className={styles.governance_main_subtitle}>
-        创建您的提案
-        <Button
-          className={styles.governance_main_subtitle_action}
-          onClick={()=>{addProposal()}}
-        >
-          创建提案
-        </Button>
-      </h4>
       {
         isEmpty ? (
-          <div className={styles.governance_main_empty}>
-            <div className={styles.governance_main_empty_main}>
-              <p className={styles.governance_main_empty_title}>没有提案</p>
-              <p className={styles.governance_main_empty_desc}>社区成员提交的提案将显示在此处</p>
+          <div className={styles.shareholder_main_empty}>
+            <div className={styles.shareholder_main_empty_main}>
+              <p className={styles.shareholder_main_empty_title}>没有提案</p>
+              <p className={styles.shareholder_main_empty_desc}>社区成员提交的提案将显示在此处</p>
             </div>
           </div>
         ) : (
-          <div className={styles.governance_main_list}>
+          <div className={styles.shareholder_main_list}>
             {
               [1,2,3,4,5].map(item=>
                 <div
-                  className={styles.governance_main_list_item}
+                  className={styles.shareholder_main_list_item}
                   key={item}
                 >
-                  <div className={styles.governance_main_list_item_info}>
-                    <label className={styles.governance_main_list_item_info_num}>2.43</label>
-                    <p className={styles.governance_main_list_item_info_desc}>提案名称是四个字</p>
+                  <h3 className={styles.shareholder_main_list_item_title}>2022年第一季度</h3>
+                  <div className={styles.shareholder_main_list_item_info}>
+                    <span className={styles.shareholder_main_list_item_info_label}>平台收益</span>
+                    <span className={styles.shareholder_main_list_item_info_value}>$&nbsp;000.00</span>
+                  </div>
+                  <div className={styles.shareholder_main_list_item_info}>
+                    <span className={styles.shareholder_main_list_item_info_label}>股权分红</span>
+                    <span className={styles.shareholder_main_list_item_info_value}>$&nbsp;000.00</span>
                   </div>
                   <Button
-                    className={`${styles.governance_main_list_item_action} ${item == 1 ? `${styles.default}` : `${styles.active}`}`}
+                    className={`${styles.shareholder_main_list_item_action}`}
                     onClick={()=>{showDetail(item)}}
                   >
                     {item == 1 ? '已激活' : '已执行'}
@@ -224,4 +219,4 @@ const App = () => {
     </div>
   )
 }
-export default App;
+export default Shareholder;

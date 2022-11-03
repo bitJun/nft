@@ -9,17 +9,14 @@ import {
 } from 'antd';
 import Governance from './Component/Governance';
 import Guild from './Component/Guild';
+import Shareholder from './Component/Shareholder';
 import styles from './index.module.less';
 const {
   TextArea
 } = Input;
 const Casting = () => {
   const [active, setActive] = useState<number>(1);
-  const [isEmpty, setIsEmpty] = useState<boolean>(false);
-  const [show, setShow] = useState<boolean>(false);
-  const [open, setOpen] = useState<boolean>(false);
   const [title, setTitle] = useState<string>('');
-  const [subTitle, setSubTitle] = useState<string>('');
   const [desc, setDesc] = useState<string>('');
   useEffect(()=>{
     const container = document.body;
@@ -104,7 +101,7 @@ const Casting = () => {
   }
   return (
     <div className={styles.governance_view}>
-      <Button className={styles.governance_view_action} onClick={()=>{setIsEmpty(!isEmpty)}}>链接钱包</Button>
+      <Button className={styles.governance_view_action}>链接钱包</Button>
       {
         isMobile() ? (
           <div style={{
@@ -125,6 +122,10 @@ const Casting = () => {
       {
         active == 2 &&
         <Guild />
+      }
+      {
+        active == 3 &&
+        <Shareholder />
       }
     </div>
   )
