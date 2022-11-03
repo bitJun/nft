@@ -101,6 +101,12 @@ const BaseLayout = ({ children }: LayoutProps) => {
             Fortuna治理
           </div>
           <div
+            className={`container-layout-nav-item ${pathname == '/page/blindBox' ? 'active' : ''}`}
+            onClick={(e:any)=>{goLink('/page/blindBox', e)}}
+          >
+            盲盒
+          </div>
+          <div
             className={`container-layout-nav-item ${pathname == '/page/register' ? 'active' : ''}`}
             onClick={(e:any)=>{goLink('/page/register', e)}}
           >
@@ -206,6 +212,12 @@ const BaseLayout = ({ children }: LayoutProps) => {
               onClick={(e:any)=>{goLink('/page/governance', e)}}
             >
               Fortuna治理
+            </div>
+            <div
+              className={`mobile-layout-nav-item ${pathname == '/page/blindBox' ? 'active' : ''}`}
+              onClick={(e:any)=>{goLink('/page/blindBox', e)}}
+            >
+              盲盒
             </div>
             <div
               className={`mobile-layout-nav-item ${pathname == '/page/register' ? 'active' : ''}`}

@@ -10,6 +10,7 @@ import Register from './pages/Register';
 import Unique from './pages/Unique';
 import Identity from './pages/Identity';
 import Governance from './pages/Governance';
+import BlindBox from './pages/BlindBox';
 import 'antd/dist/antd.css';
 
 function App() {
@@ -28,6 +29,7 @@ function App() {
             <Route path="/page/unique" element={<Unique />} />
             <Route path="/page/identity" element={<Identity />} />
             <Route path="/page/governance" element={<Governance />} />
+            <Route path="/page/blindBox" element={<BlindBox />} />
           </Route>
         </Routes>
       </HashRouter>
