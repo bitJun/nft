@@ -71,6 +71,12 @@ const BaseLayout = ({ children }: LayoutProps) => {
             我的作品
           </div>
           <div
+            className={`container-layout-nav-item ${pathname == '/page/author' ? 'active' : ''}`}
+            onClick={(e:any)=>{goLink('/page/author', e)}}
+          >
+            所有作者
+          </div>
+          <div
             className={`container-layout-nav-item ${pathname == '/page/identity' ? 'active' : ''}`}
             onClick={(e:any)=>{goLink('/page/identity', e)}}
           >
@@ -186,6 +192,11 @@ const BaseLayout = ({ children }: LayoutProps) => {
               className={`mobile-layout-nav-item ${pathname == '/page/mine' ? 'active' : ''}`}
               onClick={(e:any)=>{goLink('/page/mine', e)}}>
               我的作品
+            </div>
+            <div
+              className={`mobile-layout-nav-item ${pathname == '/page/author' ? 'active' : ''}`}
+              onClick={(e:any)=>{goLink('/page/author', e)}}>
+              所有作者
             </div>
             <div
               className={`mobile-layout-nav-item ${pathname == '/page/identity' ? 'active' : ''}`}
