@@ -57,10 +57,30 @@ const Index = () => {
             className={styles.index_view_banner_header_main_logo}
           />
           <ul className={styles.index_view_banner_header_main_nav}>
-            <li className={styles.index_view_banner_header_main_nav_item}>Fortuna</li>
-            <li className={styles.index_view_banner_header_main_nav_item}>Fortuna</li>
-            <li className={styles.index_view_banner_header_main_nav_item}>Fortuna</li>
-            <li className={styles.index_view_banner_header_main_nav_item}>Fortuna</li>
+            <li
+              className={styles.index_view_banner_header_main_nav_item}
+              onClick={(e)=>{navigate('/community')}}
+            >
+              Fortuna
+            </li>
+            <li
+              className={styles.index_view_banner_header_main_nav_item}
+              onClick={(e)=>{navigate('/community')}}
+            >
+              Fortuna
+            </li>
+            <li
+              className={styles.index_view_banner_header_main_nav_item}
+              onClick={(e)=>{navigate('/community')}}
+            >
+              Fortuna
+            </li>
+            <li
+              className={styles.index_view_banner_header_main_nav_item}
+              onClick={(e)=>{navigate('/community')}}
+            >
+              Fortuna
+            </li>
           </ul>
           <img
             src={navIcon}

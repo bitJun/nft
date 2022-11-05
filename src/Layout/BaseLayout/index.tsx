@@ -89,6 +89,12 @@ const BaseLayout = ({ children }: LayoutProps) => {
             商城
           </div>
           <div
+            className={`container-layout-nav-item ${pathname == '/page/mall' ? 'active' : ''}`}
+            onClick={(e:any)=>{goLink('/page/mall', e)}}
+          >
+            mall
+          </div>
+          <div
             className={`container-layout-nav-item ${pathname == '/page/exchange' ? 'active' : ''}`}
             onClick={(e:any)=>{goLink('/page/exchange', e)}}
           >
@@ -122,8 +128,8 @@ const BaseLayout = ({ children }: LayoutProps) => {
         <div className='container-layout-other'>
           <div className='container-layout-other-main'>
             <div
-              className={`container-layout-other-main-item ${pathname == '/page/register' ? 'active' : ''}`}
-              onClick={(e:any)=>{goLink('/page/register', e)}}
+              className={`container-layout-other-main-item ${pathname == '/page/guild' ? 'active' : ''}`}
+              onClick={(e:any)=>{goLink('/page/guild', e)}}
             >
               加入公会
             </div>
@@ -209,6 +215,11 @@ const BaseLayout = ({ children }: LayoutProps) => {
               商城
             </div>
             <div
+              className={`mobile-layout-nav-item ${pathname == '/page/mall' ? 'active' : ''}`}
+              onClick={(e:any)=>{goLink('/page/mall', e)}}>
+              mall
+            </div>
+            <div
               className={`mobile-layout-nav-item ${pathname == '/page/exchange' ? 'active' : ''}`}
               onClick={(e:any)=>{goLink('/page/exchange', e)}}>
               Tyche交换池
@@ -239,8 +250,8 @@ const BaseLayout = ({ children }: LayoutProps) => {
           <div className='mobile-layout-other'>
             <div className='mobile-layout-other-main'>
               <div
-                className={`mobile-layout-other-main-item ${pathname == '/page/register' ? 'active' : ''}`}
-                onClick={(e:any)=>{goLink('/page/register', e)}}
+                className={`mobile-layout-other-main-item ${pathname == '/page/guild' ? 'active' : ''}`}
+                onClick={(e:any)=>{goLink('/page/guild', e)}}
               >
                 加入公会
               </div>

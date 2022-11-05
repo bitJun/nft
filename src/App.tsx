@@ -13,6 +13,9 @@ import Governance from './pages/Governance';
 import BlindBox from './pages/BlindBox';
 import Author from './pages/Author';
 import AuthorDetail from './pages/Author/detail';
+import Guild from './pages/Guild';
+import Mall from './pages/Mall';
+import Community from './pages/Community';
 import 'antd/dist/antd.css';
 
 function App() {
@@ -21,6 +24,7 @@ function App() {
       <HashRouter>
         <Routes>
           <Route path="/" element={<Index />} />
+          <Route path="/community" element={<Community />} />
         </Routes>
         <Routes>
           <Route path="/page" element={<PageLayout />}>
@@ -34,6 +38,8 @@ function App() {
             <Route path="/page/blindBox" element={<BlindBox />} />
             <Route path="/page/author" element={<Author />} />
             <Route path="/page/author/:id" element={<AuthorDetail />} />
+            <Route path="/page/guild" element={<Guild />} />
+            <Route path="/page/mall" element={<Mall />} />
           </Route>
         </Routes>
       </HashRouter>
