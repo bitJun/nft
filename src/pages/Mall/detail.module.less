@@ -1,0 +1,269 @@
+:global {
+  .author_container {
+    background-image: url('../../assets/images/mall_bg.jpeg') !important;
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
+}
+@media only screen and (min-width: 750px) {
+  .mall_info {
+    padding: 96px 0 30px 145px;
+    height: 100vh;
+    overflow-y: scroll;
+    box-sizing: border-box;
+    position: relative;
+    &_title {
+      display: flex;
+      height: 28px;
+      align-items: center;
+      gap: 10px;
+      font-size: 28px;
+      letter-spacing: 3px;
+      line-height: 35px;
+      color: #ffffff;
+      font-family: Source Han Sans CN;
+      margin-bottom: 106px;
+    }
+    &_main {
+      padding-left: 150px;
+      display: flex;
+      &_img {
+        width: 450px;
+        height: 660px;
+        border-radius: 20px;
+        margin-right: 112px;
+      }
+      &_container {
+
+      }
+      &_content {
+        padding-top: 66px;
+        width: 351px;
+        &_title {
+          font-size: 28px;
+          line-height: 35px;
+          color: #ffffff;
+          font-weight: bold;
+          font-family: Source Han Sans CN;
+          padding-bottom: 63px;
+          border-bottom: 1px solid #ffffff;
+          margin-bottom: 20px;
+        }
+        &_desc {
+          width: 320px;
+          height: 38px;
+          line-height: 19px;
+          font-size: 14px;
+          line-height: 24px;
+          color: #ffffff;
+          font-family: Source Han Sans CN;
+          margin-bottom: 57px;
+        }
+        &_detail {
+          width: 351px;
+          height: 120px;
+          border-radius: 15px;
+          background-color: #434343;
+          padding: 6px 21px 0 21px;
+          box-sizing: border-box;
+          margin-bottom: 41px;
+          &_title {
+            font-size: 14px;
+            letter-spacing: 1px;
+            line-height: 24px;
+            color: #ffffff;
+            font-weight: 300;
+            font-family: Source Han Sans CN;
+            margin-bottom: 17px;
+          }
+          &_price {
+            display: flex;
+            align-items: baseline;
+            justify-content: space-between;
+            height: 32px;
+            font-size: 32px;
+            color: #ffffff;
+            font-family: 849;
+            margin-bottom: 11px;
+            &_unit {
+              font-size: 14px;
+              letter-spacing: 1px;
+              line-height: 24px;
+              color: #ffffff;
+              font-weight: 300;
+              font-family: Source Han Sans CN;
+            }
+          }
+          &_other {
+            display: flex;
+            height: 14px;
+            align-items: center;
+            justify-content: flex-end;
+            font-size: 14px;
+            letter-spacing: 1px;
+            line-height: 24px;
+            color: #ffffff;
+            font-weight: 300;
+            font-family: Source Han Sans CN;
+          }
+        }
+        &_exchange {
+          width: 300px !important;
+          height: 35px !important;
+          background-image: linear-gradient(0deg, #98e05f 0%, #0de3ac 100%) !important;
+          font-size: 16px !important;
+          letter-spacing: 3px !important;
+          color: #ffffff !important;
+          font-family: Source Han Sans CN;
+          margin-left: 25px;
+          border: none !important;
+          margin-bottom: 19px;
+        }
+        &_buy {
+          margin-left: 25px;
+          width: 300px !important;
+          height: 35px !important; 
+          background-image: linear-gradient(0deg, #e8638f 0%, #ef0a3a 100%) !important;
+          font-size: 16px !important;
+          letter-spacing: 3px !important;
+          color: #ffffff !important;
+          border: none !important;
+          font-family: Source Han Sans CN;
+        }
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: 750px) {
+  .mall_info {
+    padding-top: 20px;
+    padding-bottom: 100px;
+    box-sizing: border-box;
+    height: 100vh;
+    overflow-y: scroll;
+    box-sizing: border-box;
+    position: relative;
+    &_title {
+      padding-left: 15px;
+      display: flex;
+      height: 28px;
+      align-items: center;
+      gap: 10px;
+      font-size: 28px;
+      letter-spacing: 3px;
+      line-height: 35px;
+      color: #ffffff;
+      font-family: Source Han Sans CN;
+      margin-bottom: 26px;
+    }
+    &_main {
+      &_img {
+        width: 100%;
+        height: auto;
+        border-radius: 20px;
+        margin-right: 112px;
+      }
+      &_container {
+        padding: 0 15px; 
+      }
+      &_content {
+        padding-top: 66px;
+        &_title {
+          font-size: 28px;
+          line-height: 35px;
+          color: #ffffff;
+          font-weight: bold;
+          font-family: Source Han Sans CN;
+          padding-bottom: 30px;
+          border-bottom: 1px solid #ffffff;
+          margin-bottom: 20px;
+        }
+        &_desc {
+          height: 38px;
+          line-height: 19px;
+          font-size: 14px;
+          line-height: 24px;
+          color: #ffffff;
+          font-family: Source Han Sans CN;
+          margin-bottom: 57px;
+        }
+        &_detail {
+          height: 120px;
+          border-radius: 15px;
+          background-color: #434343;
+          padding: 6px 21px 0 21px;
+          box-sizing: border-box;
+          margin-bottom: 41px;
+          &_title {
+            font-size: 14px;
+            letter-spacing: 1px;
+            line-height: 24px;
+            color: #ffffff;
+            font-weight: 300;
+            font-family: Source Han Sans CN;
+            margin-bottom: 17px;
+          }
+          &_price {
+            display: flex;
+            align-items: baseline;
+            justify-content: space-between;
+            height: 32px;
+            font-size: 32px;
+            color: #ffffff;
+            font-family: 849;
+            margin-bottom: 11px;
+            &_unit {
+              font-size: 14px;
+              letter-spacing: 1px;
+              line-height: 24px;
+              color: #ffffff;
+              font-weight: 300;
+              font-family: Source Han Sans CN;
+            }
+          }
+          &_other {
+            display: flex;
+            height: 14px;
+            align-items: center;
+            justify-content: flex-end;
+            font-size: 14px;
+            letter-spacing: 1px;
+            line-height: 24px;
+            color: #ffffff;
+            font-weight: 300;
+            font-family: Source Han Sans CN;
+          }
+        }
+        &_exchange {
+          width: 300px !important;
+          height: 35px !important;
+          background-image: linear-gradient(0deg, #98e05f 0%, #0de3ac 100%) !important;
+          font-size: 16px !important;
+          letter-spacing: 3px !important;
+          color: #ffffff !important;
+          font-family: Source Han Sans CN;
+          margin-left: 25px;
+          border: none !important;
+          // margin: 0 auto 19px auto;
+          margin-left: 50%;
+          transform: translateX(-50%);
+          margin-bottom: 19px;
+        }
+        &_buy {
+          margin-left: 25px;
+          width: 300px !important;
+          height: 35px !important; 
+          background-image: linear-gradient(0deg, #e8638f 0%, #ef0a3a 100%) !important;
+          font-size: 16px !important;
+          letter-spacing: 3px !important;
+          color: #ffffff !important;
+          border: none !important;
+          margin-left: 50%;
+          transform: translateX(-50%);
+          font-family: Source Han Sans CN;
+        }
+      }
+    }
+  }
+}

@@ -15,6 +15,7 @@ import Author from './pages/Author';
 import AuthorDetail from './pages/Author/detail';
 import Guild from './pages/Guild';
 import Mall from './pages/Mall';
+import MallDetail from './pages/Mall/detail';
 import Community from './pages/Community';
 import 'antd/dist/antd.css';
 
@@ -40,6 +41,7 @@ function App() {
             <Route path="/page/author/:id" element={<AuthorDetail />} />
             <Route path="/page/guild" element={<Guild />} />
             <Route path="/page/mall" element={<Mall />} />
+            <Route path="/page/mall/:id" element={<MallDetail />} />
           </Route>
         </Routes>
       </HashRouter>

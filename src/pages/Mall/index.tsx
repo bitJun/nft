@@ -10,7 +10,8 @@ import {
 } from '@ant-design/icons';
 import { useNavigate } from 'react-router-dom'
 import styles from './index.module.less';
-const Author = () => {
+
+const Mall = () => {
   const [keyword, setKeyword] = useState<string>('');
   const navigate = useNavigate()
   useEffect(()=>{
@@ -73,7 +74,13 @@ const Author = () => {
       <div className={styles.mall_view_list}>
         {
           [1,2,3,4,5,6,7].map(item=>
-            <div className={styles.mall_view_list_item} key={item}>
+            <div
+              className={styles.mall_view_list_item}
+              key={item}
+              onClick={(e)=>{
+                navigate(`/page/mall/${item}`)
+              }}
+            >
               <img
                 className={styles.mall_view_list_item_img}
                 src='https://gimg2.baidu.com/image_search/src=http%3A%2F%2Fc-ssl.duitang.com%2Fuploads%2Fitem%2F201312%2F09%2F20131209200924_WuViF.jpeg&refer=http%3A%2F%2Fc-ssl.duitang.com&app=2002&size=f9999,10000&q=a80&n=0&g=0n&fmt=auto?sec=1670246752&t=83d8e65491fd6f44766deea29a4dcf5b'
@@ -95,4 +102,4 @@ const Author = () => {
     </div>
   )
 }
-export default Author;
+export default Mall;
