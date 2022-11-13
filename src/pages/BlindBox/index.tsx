@@ -61,30 +61,30 @@ const Identity = () => {
           <div className={styles.blindbox_view_main_actions_item}>
             <img
               src={coin1}
-              className={styles.blindbox_view_main_actions_item_bg}
+              className={`${styles.blindbox_view_main_actions_item_bg} ${styles.coin1}`}
             />
-            <p className={styles.blindbox_view_main_actions_item_text}>拍1次</p>
+            <div className={styles.blindbox_view_main_actions_item_text}>拍1次</div>
           </div>
           <div className={styles.blindbox_view_main_actions_item}>
             <img
               src={coin2}
-              className={styles.blindbox_view_main_actions_item_bg}
+              className={`${styles.blindbox_view_main_actions_item_bg} ${styles.coin2}`}
             />
-            <p className={styles.blindbox_view_main_actions_item_text}>拍5次</p>
+            <div className={styles.blindbox_view_main_actions_item_text}>拍5次</div>
           </div>
           <div className={styles.blindbox_view_main_actions_item}>
             <img
               src={coin3}
-              className={styles.blindbox_view_main_actions_item_bg}
+              className={`${styles.blindbox_view_main_actions_item_bg} ${styles.coin3}`}
             />
-            <p className={styles.blindbox_view_main_actions_item_text}>拍10次</p>
+            <div className={styles.blindbox_view_main_actions_item_text}>拍10次</div>
           </div>
           <div className={styles.blindbox_view_main_actions_item}>
             <img
               src={coin4}
-              className={styles.blindbox_view_main_actions_item_bg}
+              className={`${styles.blindbox_view_main_actions_item_bg} ${styles.coin4}`}
             />
-            <p className={styles.blindbox_view_main_actions_item_text}>拍50次</p>
+            <div className={styles.blindbox_view_main_actions_item_text}>拍50次</div>
           </div>
         </div>
       </div>
