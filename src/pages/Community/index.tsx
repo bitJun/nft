@@ -7,6 +7,7 @@ import icon1 from '../../assets/images/community/icon1.png';
 import icon2 from '../../assets/images/community/icon2.png';
 import icon3 from '../../assets/images/community/icon3.png';
 import icon4 from '../../assets/images/community/icon4.png';
+import communityBg from '../../assets/images/community_bg.jpg';
 import styles from './index.module.less';
 
 const Community = () => {
@@ -83,24 +84,22 @@ const Community = () => {
             autoplay={true}
             afterChange={onChange}
           >
-            <div>
-              <img
-                className={styles.community_view_carousel_item}
-                src='https://gimg2.baidu.com/image_search/src=http%3A%2F%2Fimg.zcool.cn%2Fcommunity%2F01aa175a26186ea801216e8dc22fcd.jpg%402o.jpg&refer=http%3A%2F%2Fimg.zcool.cn&app=2002&size=f9999,10000&q=a80&n=0&g=0n&fmt=auto?sec=1670242932&t=73decf26a0056749f9897e82c9deb80f'
-              />
-            </div>
-            <div>
-              <img
-                className={styles.community_view_carousel_item}
-                src='https://gimg2.baidu.com/image_search/src=http%3A%2F%2Fimg.zcool.cn%2Fcommunity%2F01e669572bfe806ac725381234430c.jpg%402o.jpg&refer=http%3A%2F%2Fimg.zcool.cn&app=2002&size=f9999,10000&q=a80&n=0&g=0n&fmt=auto?sec=1670242932&t=73dc57065682357d4b8871793d9ed8d1'
-              />
-            </div>
-            <div>
-              <img
-                className={styles.community_view_carousel_item}
-                src='https://gimg2.baidu.com/image_search/src=http%3A%2F%2Fimg.zcool.cn%2Fcommunity%2F01143955b4f64c6ac725ca50e00c50.png&refer=http%3A%2F%2Fimg.zcool.cn&app=2002&size=f9999,10000&q=a80&n=0&g=0n&fmt=auto?sec=1670242932&t=2042c36371af34b78f05eaa7ac9be19d'
-              />
-            </div>
+            {
+              [1].map(item=>
+                <div className={styles.community_view_carousel_item} key={item}>
+                  <img
+                    src={communityBg}
+                    className={styles.community_view_carousel_item_bg}
+                  />
+                  <div className={styles.community_view_carousel_item_main}>
+                    <p className={styles.community_view_carousel_item_main_tip}>FUA代币已经上线，通往Fortuna元宇宙的大门已经打开</p>
+                    <h3 className={styles.community_view_carousel_item_main_title}>欢迎来到Fortuna</h3>
+                    <p className={styles.community_view_carousel_item_main_desc}>FUA代币是一段长长的介绍，FUA代币是一段长长的介绍，FUA代币是一段长长的介绍， FUA代币是一段长长的介绍，FUA代币是FUA代币是一段长长的介绍，</p>
+                    <Button className={styles.community_view_carousel_item_main_btn}>进入社区</Button>
+                  </div>
+                </div>  
+              )
+            }
           </Carousel>
         </div>
         <div className={styles.community_view_list}>
