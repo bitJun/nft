@@ -1,0 +1,11 @@
+.result_view {
+  position: relative;
+}
+.result_view_img {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  height: 460px;
+  width: auto;
+  top: 0;
+}

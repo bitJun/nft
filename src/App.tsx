@@ -18,6 +18,7 @@ import Mall from './pages/Mall';
 import MallDetail from './pages/Mall/detail';
 import Community from './pages/Community';
 import 'antd/dist/antd.css';
+import './App.css';
 
 function App() {
   return (

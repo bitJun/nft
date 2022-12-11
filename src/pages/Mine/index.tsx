@@ -1,12 +1,17 @@
 import { useEffect, useState } from 'react';
 import {
-  Button
+  Button,
+  Modal
 } from 'antd';
+import OpenModal from '../../component/OpenModal';
+import OpenBindBoxModal from '../../component/OpenBindBoxModal';
 import styles from './index.module.less';
 import casting from '../../assets/images/pic.png';
 import shareIcon from '../../assets/images/share.png';
 
 const Mine = () => {
+  const [showModal, setShowModal] = useState(false);
+  const [type, setType] = useState('');
   useEffect(()=>{
     const container = document.body;
     if (container != null) {
@@ -27,7 +32,15 @@ const Mine = () => {
             className={styles.mine_view_casting_item_img}
           />
           <div className={styles.mine_view_casting_item_flex}>
-            <Button className={styles.mine_view_casting_item_action}>铸造独特款 NFT</Button>
+            <Button
+              className={styles.mine_view_casting_item_action}
+              onClick={()=>{
+                setType('identity');
+                setShowModal(true);
+              }}
+            >
+              铸造独特款 NFT
+            </Button>
           </div>
         </div>
         <div className={styles.mine_view_casting_item}>
@@ -36,7 +49,15 @@ const Mine = () => {
             className={styles.mine_view_casting_item_img}
           />
           <div className={styles.mine_view_casting_item_flex}>
-            <Button className={styles.mine_view_casting_item_action}>铸造限量款 NFT</Button>
+            <Button
+              className={styles.mine_view_casting_item_action}
+              onClick={()=>{
+                setType('bindBox');
+                setShowModal(true);
+              }}
+            >
+              铸造独特款 NFT
+            </Button>
           </div>
         </div>
       </div>
@@ -84,6 +105,26 @@ const Mine = () => {
           </li>
         </ul>
       </div>
+      <Modal
+        open={showModal} 
+        footer={null}
+        title=''
+        width={800}
+        onCancel={()=>{setShowModal(false)}}
+      >
+        {
+          type == 'identity' &&
+          <OpenModal
+            img='https://gimg2.baidu.com/image_search/src=http%3A%2F%2Finews.gtimg.com%2Fnewsapp_bt%2F0%2F14200158891%2F641&refer=http%3A%2F%2Finews.gtimg.com&app=2002&size=f9999,10000&q=a80&n=0&g=0n&fmt=auto?sec=1667207981&t=bc7d815dc5444c36e83bc804d79906c4'
+          />
+        }
+        {
+          type == 'bindBox' &&
+          <OpenBindBoxModal
+            img='https://gimg2.baidu.com/image_search/src=http%3A%2F%2Finews.gtimg.com%2Fnewsapp_bt%2F0%2F14200158891%2F641&refer=http%3A%2F%2Finews.gtimg.com&app=2002&size=f9999,10000&q=a80&n=0&g=0n&fmt=auto?sec=1667207981&t=bc7d815dc5444c36e83bc804d79906c4'
+          />
+        }
+      </Modal>
     </div>
   )
 }
