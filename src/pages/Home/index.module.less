@@ -258,6 +258,7 @@
           }
         }
         &_banner {
+          margin-top: 40px;
           width: 563px;
           height: 584px;
         }
@@ -408,6 +409,12 @@
         &_item:nth-child(3n-1) {
           margin: 0 38px 0 37px;
         }
+        &_item:hover {
+          cursor: pointer;
+          transition: all 2s;
+          /*放大倍数*/
+          transform: scale(1.2);
+        }
       }
     }
     &_token {
@@ -446,7 +453,7 @@
       }
       &_img {
         position: absolute;
-        right: 0;
+        right: -25px;
         top: 0;
         width: 613px;
         height: 787px;
@@ -561,6 +568,10 @@
           width: 200px;
           height: 40px;
           background: linear-gradient(0deg, #E8608D 0%, #EF0A3A 100%);
+          cursor: pointer;
+        }
+        &_action:hover {
+          color: #40a9ff !important;
         }
       }
     }
