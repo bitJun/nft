@@ -110,6 +110,7 @@ const Mine = () => {
         footer={null}
         title=''
         width={800}
+        destroyOnClose={true}
         onCancel={()=>{setShowModal(false)}}
       >
         {

@@ -8,10 +8,16 @@ const OpenModal = (props) => {
   } = props;
   const [showResult, setShowResult] = useState(false);
   useEffect(()=>{
-    setTimeout(()=>{
+    // setTimeout(()=>{
+    //   openResult();
+    // }, 10000);
+    let elevideo = document.getElementById("video");
+    elevideo && elevideo.addEventListener('ended', function () { //加载数据
+      //视频的总长度
+      // console.log(elevideo.duration);
       openResult();
-    }, 10000);
-  }, [img]);
+    });
+  }, []);
 
   const openResult = () => {
     setShowResult(true);
@@ -26,7 +32,7 @@ const OpenModal = (props) => {
             src={img}
           />
         ) : (
-          <video width='100%' height="100%" autoplay="autoplay" muted >
+          <video id="video" width='100%' height="100%" autoPlay="autoplay" muted>
             <source src={IdentityPlayer} />
           </video>
         )
