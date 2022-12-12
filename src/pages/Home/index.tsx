@@ -15,7 +15,7 @@ import leftIcon from '../../assets/images/left.png';
 import shuiying01 from '../../assets/images/01.png';
 import shuiying02 from '../../assets/images/02.png';
 import shuiying03 from '../../assets/images/03.png';
-import shuiying04 from '../../assets/images/04.png';
+import singleIcon from '../../assets/images/singleIcon.png';
 import { useNavigate } from 'react-router-dom';
 import styles from './index.module.less';
 
@@ -288,10 +288,62 @@ const Index = () => {
               </h3>
             )
           }
-          <img
+          {/* <img
             src={tu}
             className={styles.index_view_guide_img}
-          />
+          /> */}
+          <div className={styles.index_view_guide_section}>
+            <div className={styles.index_view_guide_section_list}>
+              <img
+                src={singleIcon}
+                className={styles.index_view_guide_section_list_item}
+              />
+              <img
+                src={singleIcon}
+                className={styles.index_view_guide_section_list_item}
+              />
+              <img
+                src={singleIcon}
+                className={styles.index_view_guide_section_list_item}
+              />
+              <img
+                src={singleIcon}
+                className={styles.index_view_guide_section_list_item}
+              />
+            </div>
+            <div className={styles.index_view_guide_section_lists}>
+              <img
+                src={singleIcon}
+                className={styles.index_view_guide_section_lists_item}
+              />
+              <img
+                src={singleIcon}
+                className={styles.index_view_guide_section_lists_item}
+              />
+              <img
+                src={singleIcon}
+                className={styles.index_view_guide_section_lists_item}
+              />
+            </div>
+            <div className={styles.index_view_guide_section_list}>
+              <img
+                src={singleIcon}
+                className={styles.index_view_guide_section_list_item}
+              />
+              <img
+                src={singleIcon}
+                className={styles.index_view_guide_section_list_item}
+              />
+              <img
+                src={singleIcon}
+                className={styles.index_view_guide_section_list_item}
+              />
+              <img
+                src={singleIcon}
+                className={styles.index_view_guide_section_list_item}
+              />
+            </div>
+          </div>
         </div>
         <div className={styles.index_view_others}>
           <div className={styles.index_view_others_apply}>
